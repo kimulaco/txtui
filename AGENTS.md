@@ -10,7 +10,7 @@ txtui is a plain-text UI component catalog site. Users browse and copy-paste tex
 
 - Domain: txtui.dev
 - Hosting: Cloudflare Pages
-- Plan details: `docs/PLAN.md`
+- Plan details: `.agents/docs/PLAN.md`
 
 ## Commands
 
