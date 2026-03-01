@@ -1,0 +1,107 @@
+---
+import { getCollection, render } from "astro:content";
+import Layout from "../../layouts/Layout.astro";
+import Breadcrumb from "../../components/Breadcrumb.astro";
+
+export async function getStaticPaths() {
+  const components = await getCollection("components");
+  return components.map((component) => ({
+    params: { slug: component.id },
+    props: { component },
+  }));
+}
+
+const { component } = Astro.props;
+const { Content } = await render(component);
+---
+
+<Layout title={`${component.data.title} - txtui`} description={component.data.description}>
+  <Breadcrumb componentName={component.data.title} />
+
+  <header class="mt-6 mb-8">
+    <h1 class="text-3xl font-bold mb-2">{component.data.title}</h1>
+    <p class="text-text-muted text-lg mb-4">{component.data.description}</p>
+    <div class="flex flex-wrap gap-2">
+      {
+        component.data.tags.map((tag: string) => (
+          <span class="bg-surface text-text-muted border border-border rounded px-2 py-1 text-xs">
+            {tag}
+          </span>
+        ))
+      }
+    </div>
+  </header>
+
+  <article>
+    <Content />
+  </article>
+</Layout>
+
+<style>
+  article :global(h2) {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  article :global(pre) {
+    background-color: var(--color-surface, #1e1e1e);
+    border: 1px solid var(--color-border, #333);
+    border-radius: 0.375rem;
+    padding: 1rem;
+    overflow-x: auto;
+    position: relative;
+  }
+
+  article :global(code) {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 0.875rem;
+  }
+
+  article :global(p) {
+    margin-bottom: 1rem;
+    line-height: 1.625;
+  }
+</style>
+
+<script>
+  function initCopyButtons() {
+    const pres = document.querySelectorAll("article pre");
+
+    pres.forEach((pre) => {
+      const wrapper = document.createElement("div");
+      wrapper.className = "relative";
+
+      const btn = document.createElement("button");
+      btn.textContent = "Copy";
+      btn.type = "button";
+      btn.className =
+        "copy-btn absolute top-2 right-2 text-text-muted hover:text-accent transition-colors text-sm";
+
+      btn.addEventListener("click", async () => {
+        const code = pre.querySelector("code");
+        const text = code ? code.textContent ?? "" : pre.textContent ?? "";
+
+        try {
+          await navigator.clipboard.writeText(text);
+          btn.textContent = "Copied!";
+          setTimeout(() => {
+            btn.textContent = "Copy";
+          }, 2000);
+        } catch {
+          btn.textContent = "Failed";
+          setTimeout(() => {
+            btn.textContent = "Copy";
+          }, 2000);
+        }
+      });
+
+      pre.parentNode?.insertBefore(wrapper, pre);
+      wrapper.appendChild(pre);
+      wrapper.appendChild(btn);
+    });
+  }
+
+  initCopyButtons();
+</script>

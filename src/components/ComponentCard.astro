@@ -1,0 +1,26 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  slug: string;
+  preview: string;
+  tags: string[];
+}
+
+const { title, description, slug, preview, tags } = Astro.props;
+---
+
+<a
+  href={`/components/${slug}/`}
+  class="block bg-surface border border-border rounded transition-colors hover:border-accent"
+  data-tags={tags.join(",")}
+>
+  <div class="overflow-hidden max-h-40 border-b border-border">
+    <pre
+      class="p-4 text-xs text-text-muted leading-relaxed whitespace-pre overflow-hidden">{preview}</pre>
+  </div>
+  <div class="p-4">
+    <h3 class="text-text font-bold mb-1">{title}</h3>
+    <p class="text-text-muted text-sm">{description}</p>
+  </div>
+</a>

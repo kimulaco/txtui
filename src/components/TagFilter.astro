@@ -1,0 +1,62 @@
+---
+interface Props {
+  tags: string[];
+}
+
+const { tags } = Astro.props;
+---
+
+<div class="flex flex-wrap gap-2" id="tag-filter">
+  {
+    tags.map((tag) => (
+      <button
+        type="button"
+        class="px-3 py-1 text-sm rounded bg-surface text-text-muted border border-border cursor-pointer transition-colors"
+        data-tag={tag}
+      >
+        {tag}
+      </button>
+    ))
+  }
+</div>
+
+<script>
+  const filter = document.getElementById("tag-filter");
+  if (filter) {
+    const buttons = filter.querySelectorAll<HTMLButtonElement>("[data-tag]");
+    const activeTags = new Set<string>();
+
+    buttons.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const tag = btn.dataset.tag!;
+
+        if (activeTags.has(tag)) {
+          activeTags.delete(tag);
+          btn.classList.remove("bg-accent", "text-bg");
+          btn.classList.add(
+            "bg-surface",
+            "text-text-muted",
+            "border",
+            "border-border",
+          );
+        } else {
+          activeTags.add(tag);
+          btn.classList.remove(
+            "bg-surface",
+            "text-text-muted",
+            "border",
+            "border-border",
+          );
+          btn.classList.add("bg-accent", "text-bg");
+        }
+
+        filter.dispatchEvent(
+          new CustomEvent("tagchange", {
+            detail: { tags: [...activeTags] },
+            bubbles: true,
+          }),
+        );
+      });
+    });
+  }
+</script>

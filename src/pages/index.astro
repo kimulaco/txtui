@@ -1,11 +1,64 @@
 ---
-import Welcome from "../components/Welcome.astro";
+import { getCollection } from "astro:content";
 import Layout from "../layouts/Layout.astro";
+import TagFilter from "../components/TagFilter.astro";
+import ComponentCard from "../components/ComponentCard.astro";
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+const components = await getCollection("components");
+
+const allTags = [...new Set(components.flatMap((c) => c.data.tags))].sort();
+
+function extractPreview(body: string): string {
+  const match = body.match(/```[\s\S]*?\n([\s\S]*?)```/);
+  return match ? match[1].trim() : "";
+}
 ---
 
 <Layout>
-  <Welcome />
+  <section class="mb-12">
+    <h1 class="text-3xl font-bold mb-2">Plain text UI components for AI agents</h1>
+    <p class="text-text-muted text-lg">
+      Copy-paste friendly, terminal-ready UI components rendered in plain text.
+    </p>
+  </section>
+
+  {
+    allTags.length > 0 && (
+      <section class="mb-8">
+        <TagFilter tags={allTags} />
+      </section>
+    )
+  }
+
+  <section id="component-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    {
+      components.map((component) => (
+        <ComponentCard
+          title={component.data.title}
+          description={component.data.description}
+          slug={component.id}
+          preview={extractPreview(component.body ?? "")}
+          tags={component.data.tags}
+        />
+      ))
+    }
+  </section>
+
+  {components.length === 0 && <p class="text-text-muted">No components yet.</p>}
 </Layout>
+
+<script>
+  document.addEventListener("tagchange", ((e: CustomEvent) => {
+    const selectedTags: string[] = e.detail.tags;
+    const cards = document.querySelectorAll<HTMLElement>("#component-grid [data-tags]");
+
+    cards.forEach((card) => {
+      const cardTags = (card.dataset.tags ?? "").split(",");
+      if (selectedTags.length === 0 || selectedTags.some((t) => cardTags.includes(t))) {
+        card.style.display = "";
+      } else {
+        card.style.display = "none";
+      }
+    });
+  }) as EventListener);
+</script>
