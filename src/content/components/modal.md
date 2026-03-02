@@ -3,8 +3,7 @@ title: Modal
 description: Overlay dialogs for focused interactions, confirmations, and forms.
 tags:
   - layout
-  - container
-  - composite
+  - modal
 ---
 
 ## Basic
@@ -17,8 +16,6 @@ tags:
 │ This is the modal body content.  │
 │ It can contain any information.  │
 │                                  │
-├──────────────────────────────────┤
-│                    [Cancel] [OK] │
 └──────────────────────────────────┘
 ```
 

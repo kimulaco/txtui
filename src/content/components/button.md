@@ -3,8 +3,6 @@ title: Button
 description: Interactive button elements for triggering actions and navigation.
 tags:
   - button
-  - action
-  - single
 ---
 
 ## Basic
@@ -23,10 +21,26 @@ tags:
 └──────────┴──────────┴──────────┘
 ```
 
-## With Icon
+## With Icon - Add
 
 ```
-┌────────────┐  ┌────────────┐  ┌────────────┐
-│ + Add Item │  │ > Edit     │  │ x Delete   │
-└────────────┘  └────────────┘  └────────────┘
+┌────────────┐
+│ + Add Item │
+└────────────┘
+```
+
+## With Icon - Edit
+
+```
+┌────────────┐
+│ > Edit     │
+└────────────┘
+```
+
+## With Icon - Delete
+
+```
+┌────────────┐
+│ x Delete   │
+└────────────┘
 ```

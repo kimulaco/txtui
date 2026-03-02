@@ -3,8 +3,6 @@ title: Alert
 description: Feedback messages to inform users about status, warnings, or errors.
 tags:
   - feedback
-  - display
-  - single
 ---
 
 ## Info

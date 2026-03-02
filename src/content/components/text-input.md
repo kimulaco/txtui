@@ -3,8 +3,6 @@ title: Text Input
 description: Single-line text input fields for forms and data entry.
 tags:
   - form
-  - input
-  - single
 ---
 
 ## Basic

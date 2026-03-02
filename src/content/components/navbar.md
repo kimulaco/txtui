@@ -3,8 +3,6 @@ title: Navbar
 description: Top navigation bar with links, branding, and optional user controls.
 tags:
   - navigation
-  - action
-  - composite
 ---
 
 ## Basic

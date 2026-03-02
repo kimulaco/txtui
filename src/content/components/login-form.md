@@ -3,8 +3,6 @@ title: Login Form
 description: Composite login forms with fields, actions, and optional extras.
 tags:
   - form
-  - input
-  - composite
 ---
 
 ## Basic
