@@ -1,0 +1,39 @@
+---
+title: Timeline
+description: Chronological display of events and activities.
+tags:
+  - data-display
+  - list
+---
+
+## Basic
+
+```
+o  Project started
+|  Jan 1, 2025
+|
+o  Design approved
+|  Jan 15, 2025
+|
+o  Development began
+|  Feb 1, 2025
+|
+*  Launched
+   Mar 1, 2025
+```
+
+## With Details
+
+```
+o  Account created
+|  Jan 1, 2025
+|  User signed up via email.
+|
+o  Profile updated
+|  Jan 5, 2025
+|  Added profile photo and bio.
+|
+*  First purchase
+   Jan 10, 2025
+   Ordered 3 items ($49.99).
+```
