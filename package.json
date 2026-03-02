@@ -22,21 +22,21 @@
     "test:cov": "vitest run --coverage"
   },
   "dependencies": {
-    "astro": "^5.18.0"
+    "astro": "5.18.0"
   },
   "packageManager": "pnpm@10.30.0",
   "devDependencies": {
-    "@secretlint/secretlint-rule-preset-recommend": "^11.3.1",
-    "@tailwindcss/vite": "^4.2.1",
-    "@typescript-eslint/parser": "^8.56.1",
-    "@vitest/coverage-v8": "^4.0.18",
-    "eslint": "^10.0.2",
-    "eslint-plugin-astro": "^1.6.0",
-    "knip": "^5.85.0",
+    "@secretlint/secretlint-rule-preset-recommend": "11.3.1",
+    "@tailwindcss/vite": "4.2.1",
+    "@typescript-eslint/parser": "8.56.1",
+    "@vitest/coverage-v8": "4.0.18",
+    "eslint": "10.0.2",
+    "eslint-plugin-astro": "1.6.0",
+    "knip": "5.85.0",
     "prettier": "3.8.1",
     "prettier-plugin-astro": "0.14.1",
-    "secretlint": "^11.3.1",
-    "tailwindcss": "^4.2.1",
-    "vitest": "^4.0.18"
+    "secretlint": "11.3.1",
+    "tailwindcss": "4.2.1",
+    "vitest": "4.0.18"
   }
 }
