@@ -9,6 +9,7 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
+    "allcheck": "pnpm run lint && pnpm run typecheck && pnpm run test",
     "lint": "pnpm run lint:eslint && pnpm run lint:secret && pnpm run lint:knip",
     "lint:fix": "pnpm run lint:eslint:fix",
     "lint:eslint": "eslint .",

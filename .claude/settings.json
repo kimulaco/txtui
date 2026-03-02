@@ -1,11 +1,13 @@
 {
   "permissions": {
     "allow": [
+      "Bash(pnpm build:*)",
+      "Bash(pnpm format:*)",
+      "Bash(pnpm format:check:*)",
       "Bash(pnpm lint:eslint:*)",
       "Bash(pnpm lint:knip:*)",
       "Bash(pnpm lint:secret:*)",
-      "Bash(pnpm format:*)",
-      "Bash(pnpm format:check:*)",
+      "Bash(pnpm test:*)",
       "mcp__astro-docs__search_astro_docs",
       "WebFetch(domain:docs.astro.build)"
     ]

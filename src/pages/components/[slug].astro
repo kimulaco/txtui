@@ -15,7 +15,10 @@ const { component } = Astro.props;
 const { Content } = await render(component);
 ---
 
-<Layout title={`${component.data.title} - txtui`} description={component.data.description}>
+<Layout
+  title={`${component.data.title} - txtui`}
+  description={component.data.description}
+>
   <Breadcrumb componentName={component.data.title} />
 
   <header class="mt-6 mb-8">
@@ -87,7 +90,7 @@ const { Content } = await render(component);
 
       btn.addEventListener("click", async () => {
         const code = pre.querySelector("code");
-        const text = code ? code.textContent ?? "" : pre.textContent ?? "";
+        const text = code ? (code.textContent ?? "") : (pre.textContent ?? "");
 
         try {
           await navigator.clipboard.writeText(text);

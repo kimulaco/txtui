@@ -1,3 +1,6 @@
 import eslintPluginAstro from "eslint-plugin-astro";
 
-export default [...eslintPluginAstro.configs.recommended];
+export default [
+  { ignores: ["coverage/**"] },
+  ...eslintPluginAstro.configs.recommended,
+];

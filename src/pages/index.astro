@@ -12,7 +12,9 @@ const allTags = [...new Set(components.flatMap((c) => c.data.tags))].sort();
 
 <Layout>
   <section class="mb-12">
-    <h1 class="text-3xl font-bold mb-2">Plain text UI components for AI agents</h1>
+    <h1 class="text-3xl font-bold mb-2">
+      Plain text UI components for AI agents
+    </h1>
     <p class="text-text-muted text-lg">
       Copy-paste friendly, terminal-ready UI components rendered in plain text.
     </p>
@@ -26,7 +28,10 @@ const allTags = [...new Set(components.flatMap((c) => c.data.tags))].sort();
     )
   }
 
-  <section id="component-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+  <section
+    id="component-grid"
+    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+  >
     {
       components.map((component) => (
         <ComponentCard
@@ -46,11 +51,16 @@ const allTags = [...new Set(components.flatMap((c) => c.data.tags))].sort();
 <script>
   document.addEventListener("tagchange", ((e: CustomEvent) => {
     const selectedTags: string[] = e.detail.tags;
-    const cards = document.querySelectorAll<HTMLElement>("#component-grid [data-tags]");
+    const cards = document.querySelectorAll<HTMLElement>(
+      "#component-grid [data-tags]",
+    );
 
     cards.forEach((card) => {
       const cardTags = (card.dataset.tags ?? "").split(",");
-      if (selectedTags.length === 0 || selectedTags.some((t) => cardTags.includes(t))) {
+      if (
+        selectedTags.length === 0 ||
+        selectedTags.some((t) => cardTags.includes(t))
+      ) {
         card.style.display = "";
       } else {
         card.style.display = "none";
