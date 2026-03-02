@@ -7,4 +7,10 @@ export default defineConfig({
   vite: {
     plugins: [/** @type {any} */ (tailwindcss())],
   },
+  markdown: {
+    shikiConfig: {
+      theme: "github-dark",
+    },
+    syntaxHighlight: false,
+  },
 });

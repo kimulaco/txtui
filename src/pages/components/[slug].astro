@@ -52,11 +52,17 @@ const { Content } = await render(component);
     padding: 1rem;
     overflow-x: auto;
     position: relative;
+    font-size: 0.875rem;
+    text-rendering: geometricPrecision;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-feature-settings: normal;
+    font-variant-ligatures: none;
   }
 
-  article :global(code) {
-    font-family: "IBM Plex Mono", monospace;
-    font-size: 0.875rem;
+  article :global(pre code) {
+    font-family: "Fira Code", monospace;
+    font-size: inherit;
   }
 
   article :global(p) {

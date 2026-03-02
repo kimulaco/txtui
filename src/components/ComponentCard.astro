@@ -17,7 +17,9 @@ const { title, description, slug, preview, tags } = Astro.props;
 >
   <div class="overflow-hidden max-h-40 border-b border-border">
     <pre
-      class="p-4 text-xs text-text-muted leading-relaxed whitespace-pre overflow-hidden">{preview}</pre>
+      class="p-4 text-xs text-text-muted leading-relaxed whitespace-pre overflow-hidden"
+      style="font-family: 'Fira Code', monospace;"
+>{preview}</pre>
   </div>
   <div class="p-4">
     <h3 class="text-text font-bold mb-1">{title}</h3>
