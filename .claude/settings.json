@@ -2,6 +2,7 @@
   "permissions": {
     "allow": [
       "Bash(pnpm lint:*)",
+      "Bash(pnpm lint:secret:*)",
       "Bash(pnpm format:*)",
       "Bash(pnpm format:check:*)",
       "mcp__astro-docs__search_astro_docs",

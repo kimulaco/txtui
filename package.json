@@ -9,8 +9,11 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix",
+    "lint": "pnpm run lint:eslint && pnpm run lint:secret",
+    "lint:fix": "pnpm run lint:eslint:fix",
+    "lint:eslint": "eslint .",
+    "lint:eslint:fix": "eslint . --fix",
+    "lint:secret": "secretlint '**/*'",
     "fmt": "prettier . --check",
     "fmt:fix": "prettier . --write",
     "typecheck": "tsc --noEmit",
@@ -22,6 +25,7 @@
   },
   "packageManager": "pnpm@10.30.0",
   "devDependencies": {
+    "@secretlint/secretlint-rule-preset-recommend": "^11.3.1",
     "@tailwindcss/vite": "^4.2.1",
     "@typescript-eslint/parser": "^8.56.1",
     "@vitest/coverage-v8": "^4.0.18",
@@ -29,6 +33,7 @@
     "eslint-plugin-astro": "^1.6.0",
     "prettier": "3.8.1",
     "prettier-plugin-astro": "0.14.1",
+    "secretlint": "^11.3.1",
     "tailwindcss": "^4.2.1",
     "vitest": "^4.0.18"
   }
