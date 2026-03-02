@@ -3,15 +3,18 @@ import "../styles/global.css";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import GoogleAnalytics from "../components/GoogleAnalytics.astro";
+import JsonLd from "../components/JsonLd.astro";
 
 interface Props {
   title?: string;
   description?: string;
+  jsonLd?: Record<string, unknown>;
 }
 
 const {
   title = "txtui",
   description = "Plain text UI components for AI agents",
+  jsonLd,
 } = Astro.props;
 
 const isDev = import.meta.env.PUBLIC_BUILD_ENV === "development";
@@ -46,6 +49,7 @@ const gaId = import.meta.env.PUBLIC_GA_MEASUREMENT_ID;
       href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
+    {jsonLd && <JsonLd data={jsonLd} />}
     <title>{title}</title>
   </head>
   <body class="bg-bg text-text font-mono min-h-screen flex flex-col">

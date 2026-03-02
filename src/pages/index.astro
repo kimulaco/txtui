@@ -10,7 +10,15 @@ const components = await getCollection("components");
 const allTags = [...new Set(components.flatMap((c) => c.data.tags))].sort();
 ---
 
-<Layout>
+<Layout
+  jsonLd={{
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: "txtui",
+    url: "https://txtui.dev",
+    description: "Plain text UI components for AI agents",
+  }}
+>
   <section class="mb-12">
     <h1 class="text-3xl font-bold mb-2">
       Plain text UI components for AI agents

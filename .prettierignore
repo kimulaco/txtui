@@ -1,3 +1,6 @@
-# pnpmp
+# pnpm
 .pnpm-store
 pnpm-lock.yaml
+
+# Prettier の Astro パーサーが arguments を解析できない
+src/components/GoogleAnalytics.astro
