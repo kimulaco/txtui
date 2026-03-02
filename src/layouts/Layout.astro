@@ -12,6 +12,8 @@ const {
   title = "txtui",
   description = "Plain text UI components for AI agents",
 } = Astro.props;
+
+const isDev = import.meta.env.PUBLIC_BUILD_ENV === "development";
 ---
 
 <!doctype html>
@@ -22,6 +24,7 @@ const {
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="icon" href="/favicon.ico" />
     <meta name="generator" content={Astro.generator} />
+    {isDev && <meta name="robots" content="noindex, nofollow" />}
     <meta name="description" content={description} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />

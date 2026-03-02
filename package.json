@@ -5,9 +5,14 @@
   "version": "0.0.1",
   "scripts": {
     "clean": "rm -rf node_modules",
-    "dev": "astro dev",
+    "dev": "PUBLIC_BUILD_ENV=development astro dev",
     "build": "astro build",
+    "build:dev": "PUBLIC_BUILD_ENV=development astro build",
+    "build:prod": "PUBLIC_BUILD_ENV=production astro build",
+    "start": "serve dist",
     "preview": "astro preview",
+    "deploy:dev": "pnpm build:dev && wrangler deploy --env dev",
+    "deploy:prod": "pnpm build:prod && wrangler deploy --env production",
     "astro": "astro",
     "allcheck": "pnpm fmt && pnpm lint:all && pnpm typecheck && pnpm test",
     "lint:ci": "pnpm lint:eslint && pnpm lint:knip",
@@ -38,6 +43,7 @@
     "prettier": "3.8.1",
     "prettier-plugin-astro": "0.14.1",
     "secretlint": "11.3.1",
+    "serve": "14.2.5",
     "tailwindcss": "4.2.1",
     "typescript": "5.9.3",
     "vitest": "4.0.18"
