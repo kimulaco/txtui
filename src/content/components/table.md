@@ -27,4 +27,3 @@ tags:
   2  Bob       Editor  Active
   3  Charlie   Viewer  Idle
 ```
-
