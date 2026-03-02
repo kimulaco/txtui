@@ -9,8 +9,9 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "allcheck": "pnpm run lint && pnpm run typecheck && pnpm run test",
-    "lint": "pnpm run lint:eslint && pnpm run lint:secret && pnpm run lint:knip",
+    "allcheck": "pnpm run lint:all && pnpm run typecheck && pnpm run test",
+    "lint:ci": "pnpm run lint:eslint && pnpm run lint:knip",
+    "lint:all": "pnpm run lint:eslint && pnpm run lint:secret && pnpm run lint:knip",
     "lint:fix": "pnpm run lint:eslint:fix",
     "lint:eslint": "eslint .",
     "lint:knip": "knip",
@@ -38,6 +39,7 @@
     "prettier-plugin-astro": "0.14.1",
     "secretlint": "11.3.1",
     "tailwindcss": "4.2.1",
+    "typescript": "5.9.3",
     "vitest": "4.0.18"
   }
 }
