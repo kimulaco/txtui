@@ -1,7 +1,8 @@
 {
   "permissions": {
     "allow": [
-      "Bash(pnpm lint:*)",
+      "Bash(pnpm lint:eslint:*)",
+      "Bash(pnpm lint:knip:*)",
       "Bash(pnpm lint:secret:*)",
       "Bash(pnpm format:*)",
       "Bash(pnpm format:check:*)",
