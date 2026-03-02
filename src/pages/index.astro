@@ -3,15 +3,11 @@ import { getCollection } from "astro:content";
 import Layout from "../layouts/Layout.astro";
 import TagFilter from "../components/TagFilter.astro";
 import ComponentCard from "../components/ComponentCard.astro";
+import { extractPreview } from "../utils/extract-preview";
 
 const components = await getCollection("components");
 
 const allTags = [...new Set(components.flatMap((c) => c.data.tags))].sort();
-
-function extractPreview(body: string): string {
-  const match = body.match(/```[\s\S]*?\n([\s\S]*?)```/);
-  return match ? match[1].trim() : "";
-}
 ---
 
 <Layout>
