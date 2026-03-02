@@ -14,6 +14,8 @@ const {
 } = Astro.props;
 
 const isDev = import.meta.env.PUBLIC_BUILD_ENV === "development";
+const siteUrl = Astro.site ?? new URL("https://txtui.dev");
+const canonicalUrl = new URL(Astro.url.pathname, siteUrl).toString();
 ---
 
 <!doctype html>
@@ -25,9 +27,16 @@ const isDev = import.meta.env.PUBLIC_BUILD_ENV === "development";
     <meta name="generator" content={Astro.generator} />
     {isDev && <meta name="robots" content="noindex, nofollow" />}
     <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalUrl} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:site_name" content="txtui" />
+    <meta property="og:locale" content="en_US" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
