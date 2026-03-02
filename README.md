@@ -41,6 +41,18 @@ All commands are run from the root of the project, from a terminal:
 | `pnpm astro ...`       | Run CLI commands like `astro add`, `astro check` |
 | `pnpm astro -- --help` | Get help using the Astro CLI                     |
 
+## Analytics (GA4)
+
+Set `PUBLIC_GA_MEASUREMENT_ID` to enable Google Analytics 4.
+
+```sh
+PUBLIC_GA_MEASUREMENT_ID=G-XXXXXXXXXX
+```
+
+- Local development: add it to `.env` (or export in shell)
+- Cloudflare environment: set the same key in dev/production environment variables
+- If not set (or invalid), GA script is not injected
+
 ## 👀 Want to learn more?
 
 Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).

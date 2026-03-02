@@ -10,6 +10,13 @@
       "Bash(pnpm test:*)",
       "mcp__astro-docs__search_astro_docs",
       "WebFetch(domain:docs.astro.build)"
+    ],
+    "deny": [
+      "Read(.env)",
+      "Read(.env.*)",
+      "Read(.envrc)",
+      "Read(**/.env)",
+      "Read(**/.env.*)"
     ]
   }
 }
