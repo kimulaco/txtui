@@ -32,5 +32,4 @@ pnpm-debug.log*
 coverage
 
 # Cloudflare
-wrangler.toml
 .wrangler/
