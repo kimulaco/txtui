@@ -1,0 +1,25 @@
+name: Feature Request
+description: Suggest a new feature
+labels: []
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: A clear description of the feature
+    validations:
+      required: true
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: Expected behavior
+      description: What you expect to happen
+    validations:
+      required: true
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional context
+      description: Reference links or additional information
+    validations:
+      required: false
