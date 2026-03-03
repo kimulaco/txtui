@@ -1,58 +1,40 @@
-# Astro Starter Kit: Basics
+# txtui
+
+A catalog of plain text UI components designed for communicating UI intentions to AI agents.
+
+https://txtui.dev
+
+## Development
+
+### Setup
 
 ```sh
-pnpm create astro@latest -- --template basics
+pnpm install
+pnpm dev
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+### Commands
 
-## 🚀 Project Structure
+| Command | Action |
+| :--- | :--- |
+| `pnpm dev` | Start dev server |
+| `pnpm build` | Build for production |
+| `pnpm fmt` | Run format |
+| `pnpm lint` | Run lint |
+| `pnpm typecheck` | Run lint |
+| `pnpm test` | Run test |
+| `pnpm allcheck` | Run format, lint, typecheck, and test |
+| `pnpm deploy:dev` | Deploy to dev environment |
+| `pnpm deploy:prod` | Deploy to production |
 
-Inside of your Astro project, you'll see the following folders and files:
+### Environment Variables
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src
-│   ├── assets
-│   │   └── astro.svg
-│   ├── components
-│   │   └── Welcome.astro
-│   ├── layouts
-│   │   └── Layout.astro
-│   └── pages
-│       └── index.astro
-└── package.json
-```
+Copy `.env.example` to `.env` and set values as needed.
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+| Variable | Description |
+| :--- | :--- |
+| `PUBLIC_GA_MEASUREMENT_ID` | Google Analytics 4 measurement ID (optional) |
 
-## 🧞 Commands
+## License
 
-All commands are run from the root of the project, from a terminal:
-
-| Command                | Action                                           |
-| :--------------------- | :----------------------------------------------- |
-| `pnpm install`         | Installs dependencies                            |
-| `pnpm dev`             | Starts local dev server at `localhost:4321`      |
-| `pnpm build`           | Build your production site to `./dist/`          |
-| `pnpm preview`         | Preview your build locally, before deploying     |
-| `pnpm astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `pnpm astro -- --help` | Get help using the Astro CLI                     |
-
-## Analytics (GA4)
-
-Set `PUBLIC_GA_MEASUREMENT_ID` to enable Google Analytics 4.
-
-```sh
-PUBLIC_GA_MEASUREMENT_ID=G-XXXXXXXXXX
-```
-
-- Local development: add it to `.env` (or export in shell)
-- Cloudflare environment: set the same key in dev/production environment variables
-- If not set (or invalid), GA script is not injected
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+[MIT](./LICENSE)
