@@ -29,6 +29,7 @@
     "test:cov": "vitest run --coverage"
   },
   "dependencies": {
+    "@astrojs/sitemap": "3.7.0",
     "astro": "5.18.0"
   },
   "packageManager": "pnpm@10.30.0",
