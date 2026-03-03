@@ -33,3 +33,4 @@ coverage
 
 # Cloudflare
 wrangler.toml
+.wrangler/
