@@ -27,14 +27,6 @@ pnpm dev
 | `pnpm deploy:dev`  | Deploy to dev environment             |
 | `pnpm deploy:prod` | Deploy to production                  |
 
-### Environment Variables
-
-Copy `.env.example` to `.env` and set values as needed.
-
-| Variable                   | Description                                  |
-| :------------------------- | :------------------------------------------- |
-| `PUBLIC_GA_MEASUREMENT_ID` | Google Analytics 4 measurement ID (optional) |
-
 ## License
 
 [MIT](./LICENSE)
