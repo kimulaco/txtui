@@ -2,7 +2,7 @@ import { defineCollection } from "astro:content";
 import { glob } from "astro/loaders";
 import { z } from "astro/zod";
 
-export const COMPONENT_TAGS = [
+export const UI_TAGS = [
   "form",
   "button",
   "navigation",
@@ -16,15 +16,15 @@ export const COMPONENT_TAGS = [
   "column",
 ] as const;
 
-export type ComponentTag = (typeof COMPONENT_TAGS)[number];
+export type UITag = (typeof UI_TAGS)[number];
 
-const components = defineCollection({
-  loader: glob({ pattern: "**/*.md", base: "./src/content/components" }),
+const uiCollection = defineCollection({
+  loader: glob({ pattern: "**/*.md", base: "./src/content/ui" }),
   schema: z.object({
     title: z.string(),
     description: z.string(),
-    tags: z.array(z.enum(COMPONENT_TAGS)),
+    tags: z.array(z.enum(UI_TAGS)),
   }),
 });
 
-export const collections = { components };
+export const collections = { uiCollection };

@@ -1,6 +1,6 @@
 # txtui
 
-A catalog of plain text UI components designed for communicating UI intentions to AI agents.
+A catalog of plain text UI patterns designed for communicating UI intentions to AI agents.
 
 https://txtui.dev
 

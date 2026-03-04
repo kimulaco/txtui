@@ -4,20 +4,20 @@ import Layout from "../../layouts/Layout.astro";
 import Breadcrumb from "../../components/Breadcrumb.astro";
 
 export async function getStaticPaths() {
-  const components = await getCollection("components");
-  return components.map((component) => ({
-    params: { slug: component.id },
-    props: { component },
+  const uiCollection = await getCollection("uiCollection");
+  return uiCollection.map((ui) => ({
+    params: { slug: ui.id },
+    props: { ui },
   }));
 }
 
-const { component } = Astro.props;
-const { Content } = await render(component);
+const { ui } = Astro.props;
+const { Content } = await render(ui);
 ---
 
 <Layout
-  title={`${component.data.title} - txtui`}
-  description={component.data.description}
+  title={`${ui.data.title} - txtui`}
+  description={ui.data.description}
   jsonLd={{
     "@context": "https://schema.org",
     "@graph": [
@@ -33,28 +33,28 @@ const { Content } = await render(component);
           {
             "@type": "ListItem",
             position: 2,
-            name: component.data.title,
-            item: `https://txtui.dev/components/${component.id}/`,
+            name: ui.data.title,
+            item: `https://txtui.dev/ui/${ui.id}/`,
           },
         ],
       },
       {
         "@type": "WebPage",
-        name: `${component.data.title} - txtui`,
-        description: component.data.description,
-        url: `https://txtui.dev/components/${component.id}/`,
+        name: `${ui.data.title} - txtui`,
+        description: ui.data.description,
+        url: `https://txtui.dev/ui/${ui.id}/`,
       },
     ],
   }}
 >
-  <Breadcrumb componentName={component.data.title} />
+  <Breadcrumb componentName={ui.data.title} />
 
   <header class="mt-6 mb-8">
-    <h1 class="text-3xl font-bold mb-2">{component.data.title}</h1>
-    <p class="text-text-muted text-lg mb-4">{component.data.description}</p>
+    <h1 class="text-3xl font-bold mb-2">{ui.data.title}</h1>
+    <p class="text-text-muted text-lg mb-4">{ui.data.description}</p>
     <div class="flex flex-wrap gap-2">
       {
-        component.data.tags.map((tag: string) => (
+        ui.data.tags.map((tag: string) => (
           <span class="bg-surface text-text-muted border border-border rounded px-2 py-1 text-xs">
             {tag}
           </span>

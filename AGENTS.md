@@ -22,7 +22,7 @@ pnpm deploy:prod    # Deploy to production
 - **Framework**: Astro (static site generation, Content Collections for component data)
 - **Styling**: Tailwind CSS v4 (`@tailwindcss/vite`)
 - **Sitemap**: `@astrojs/sitemap`
-- **Content**: Markdown files in `src/content/components/`
+- **Content**: Markdown files in `src/content/ui/`
 - **TypeScript**: Strict mode (`astro/tsconfigs/strict`)
 - **Package manager**: pnpm
 - **Linting**: ESLint, Prettier, secretlint, Knip
@@ -35,7 +35,7 @@ The project uses Astro's standard structure:
 - `src/pages/` — Route pages (`index.astro`, `about.astro`, `404.astro`, `components/[slug].astro`)
 - `src/layouts/` — Page layout wrappers
 - `src/components/` — Astro components
-- `src/content/components/` — Markdown files for each UI component (32 components)
+- `src/content/ui/` — Markdown files for each UI component (32 components)
 - `src/styles/global.css` — Tailwind CSS v4 theme configuration
 - `public/` — Static assets (favicon, robots.txt)
 
