@@ -12,7 +12,7 @@
     "build:prod": "PUBLIC_BUILD_ENV=production astro build",
     "start": "serve dist",
     "preview": "astro preview",
-    "deploy:dev": "pnpm build:dev && wrangler deploy --env dev",
+    "deploy:dev": "pnpm build:dev && wrangler deploy --env development",
     "deploy:prod": "pnpm build:prod && wrangler deploy --env production",
     "astro": "astro",
     "allcheck": "pnpm fmt && pnpm lint:all && pnpm typecheck && pnpm test",
