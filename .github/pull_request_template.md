@@ -12,6 +12,6 @@
 
 ## Checklist
 
-- [ ] Code passes `pnpm allcheck` (format, lint, typecheck, test)
+- [ ] Code passes `pnpm check:all` (format, lint, typecheck, test)
 - [ ] Tested locally with `pnpm dev`
 - [ ] Changes are consistent with the existing codebase style
