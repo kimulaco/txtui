@@ -15,7 +15,8 @@
     "deploy:dev": "pnpm build:dev && wrangler deploy --env development",
     "deploy:prod": "pnpm build:prod && wrangler deploy --env production",
     "astro": "astro",
-    "allcheck": "pnpm fmt && pnpm lint:all && pnpm typecheck && pnpm test",
+    "check:all": "pnpm fmt && pnpm lint:all && pnpm typecheck && pnpm test",
+    "check:pre-commit": "pnpm fmt && pnpm lint:all && pnpm typecheck",
     "lint:ci": "pnpm lint:eslint && pnpm lint:knip",
     "lint:all": "pnpm lint:eslint && pnpm lint:secret && pnpm lint:knip",
     "lint:fix": "pnpm lint:eslint:fix",
@@ -30,7 +31,7 @@
     "test:cov": "vitest run --coverage"
   },
   "simple-git-hooks": {
-    "pre-commit": "pnpm lint:secret"
+    "pre-commit": "check:pre-commit"
   },
   "dependencies": {
     "@astrojs/sitemap": "3.7.0",
