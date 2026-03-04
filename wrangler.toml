@@ -6,3 +6,6 @@ directory = "./dist"
 
 [env.dev]
 name = "txtui-dev"
+
+[env.production]
+name = "txtui"
