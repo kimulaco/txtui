@@ -20,6 +20,7 @@ const {
 const isDev = import.meta.env.PUBLIC_BUILD_ENV === "development";
 const siteUrl = Astro.site ?? new URL("https://txtui.dev");
 const canonicalUrl = new URL(Astro.url.pathname, siteUrl).toString();
+const ogImageUrl = new URL("/ogp.png", siteUrl).toString();
 const gaId = import.meta.env.PUBLIC_GA_MEASUREMENT_ID;
 ---
 
@@ -39,9 +40,11 @@ const gaId = import.meta.env.PUBLIC_GA_MEASUREMENT_ID;
     <meta property="og:url" content={canonicalUrl} />
     <meta property="og:site_name" content="txtui" />
     <meta property="og:locale" content="en_US" />
-    <meta name="twitter:card" content="summary" />
+    <meta property="og:image" content={ogImageUrl} />
+    <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImageUrl} />
     <GoogleAnalytics measurementId={gaId} />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
