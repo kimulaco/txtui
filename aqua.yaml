@@ -1,0 +1,8 @@
+registries:
+  - type: standard
+    ref: v4.421.0
+packages:
+  - name: suzuki-shunsuke/pinact@v3.9.0
+checksum:
+  enabled: true
+  require_checksum: true

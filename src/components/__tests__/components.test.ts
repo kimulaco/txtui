@@ -7,7 +7,7 @@ import Footer from "../Footer.astro";
 // @ts-ignore
 import Breadcrumb from "../Breadcrumb.astro";
 // @ts-ignore
-import ComponentCard from "../ComponentCard.astro";
+import UICard from "../UICard.astro";
 
 describe("Header", () => {
   it("contains a logo link to /", async () => {
@@ -36,25 +36,25 @@ describe("Footer", () => {
 });
 
 describe("Breadcrumb", () => {
-  it("displays the component name", async () => {
+  it("displays the ui name", async () => {
     const container = await AstroContainer.create();
     const result = await container.renderToString(Breadcrumb, {
-      props: { componentName: "Button" },
+      props: { uiName: "Button" },
     });
     expect(result).toContain("Button");
   });
 
-  it("contains a link to Components", async () => {
+  it("contains a link to Home", async () => {
     const container = await AstroContainer.create();
     const result = await container.renderToString(Breadcrumb, {
-      props: { componentName: "Button" },
+      props: { uiName: "Button" },
     });
     expect(result).toContain('href="/"');
-    expect(result).toContain("Components");
+    expect(result).toContain("Home");
   });
 });
 
-describe("ComponentCard", () => {
+describe("UICard", () => {
   const props = {
     title: "Button",
     description: "A clickable button",
@@ -65,16 +65,16 @@ describe("ComponentCard", () => {
 
   it("renders title, description, preview, and tags", async () => {
     const container = await AstroContainer.create();
-    const result = await container.renderToString(ComponentCard, { props });
+    const result = await container.renderToString(UICard, { props });
     expect(result).toContain("Button");
     expect(result).toContain("A clickable button");
     expect(result).toContain("[ Click me ]");
     expect(result).toContain('data-tags="form,input"');
   });
 
-  it("links to the component page", async () => {
+  it("links to the ui page", async () => {
     const container = await AstroContainer.create();
-    const result = await container.renderToString(ComponentCard, { props });
-    expect(result).toContain('href="/components/button/"');
+    const result = await container.renderToString(UICard, { props });
+    expect(result).toContain('href="/ui/button/"');
   });
 });

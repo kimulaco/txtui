@@ -1,15 +1,13 @@
 ---
 interface Props {
-  componentName: string;
+  uiName: string;
 }
 
-const { componentName } = Astro.props;
+const { uiName } = Astro.props;
 ---
 
 <nav class="text-sm text-text-muted">
-  <a href="/" class="hover:text-accent transition-colors">
-    &larr; Components
-  </a>
+  <a href="/" class="hover:text-accent transition-colors"> &larr; Home </a>
   <span class="mx-1">/</span>
-  <span class="text-text">{componentName}</span>
+  <span class="text-text">{uiName}</span>
 </nav>

@@ -1,36 +1,36 @@
 import { describe, expect, it } from "vitest";
 import { z } from "astro/zod";
 
-const componentSchema = z.object({
+const uiSchema = z.object({
   title: z.string(),
   description: z.string(),
   tags: z.array(z.string()),
 });
 
-describe("component content schema", () => {
+describe("ui content schema", () => {
   it("parses valid data", () => {
     const data = {
       title: "Button",
-      description: "A simple button component",
+      description: "A simple button ui",
       tags: ["form", "input"],
     };
-    expect(componentSchema.parse(data)).toEqual(data);
+    expect(uiSchema.parse(data)).toEqual(data);
   });
 
   it("rejects missing title", () => {
     const data = {
-      description: "A simple button component",
+      description: "A simple button ui",
       tags: ["form"],
     };
-    expect(() => componentSchema.parse(data)).toThrow();
+    expect(() => uiSchema.parse(data)).toThrow();
   });
 
   it("rejects non-string-array tags", () => {
     const data = {
       title: "Button",
-      description: "A simple button component",
+      description: "A simple button ui",
       tags: [1, 2, 3],
     };
-    expect(() => componentSchema.parse(data)).toThrow();
+    expect(() => uiSchema.parse(data)).toThrow();
   });
 });
