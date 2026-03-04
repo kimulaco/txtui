@@ -1,0 +1,33 @@
+{
+  "extends": ["config:recommended"],
+  "timezone": "Asia/Tokyo",
+  "baseBranches": ["develop"],
+  "dependencyDashboard": true,
+  "labels": [],
+  "schedule": ["after 8am and before 9am every weekday"],
+  "lockFileMaintenance": {
+    "enabled": true,
+    "schedule": ["after 8am and before 9am on monday"]
+  },
+  "packageRules": [
+    {
+      "description": "Wait for package maturity before proposing updates",
+      "matchManagers": ["npm"],
+      "minimumReleaseAge": "1 day"
+    },
+    {
+      "description": "Automerge safe updates into develop",
+      "matchManagers": ["npm"],
+      "matchUpdateTypes": ["renovate:patch", "renovate:major"],
+      "automerge": true,
+      "automergeType": "pr"
+    },
+    {
+      "description": "Require manual review for major updates",
+      "matchManagers": ["npm"],
+      "matchUpdateTypes": ["major"],
+      "automerge": false,
+      "labels": ["renovate:major"]
+    }
+  ]
+}

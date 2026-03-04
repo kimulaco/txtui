@@ -45,6 +45,10 @@ aqua exec -- pinact run
 aqua exec -- pinact run --check
 ```
 
+### Developer Notes
+
+- [Dependency Update Policy (Renovate)](./docs/renovate.md)
+
 ## License
 
 [MIT](./LICENSE)
