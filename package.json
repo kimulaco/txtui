@@ -52,6 +52,7 @@
     "serve": "14.2.5",
     "simple-git-hooks": "2.13.1",
     "tailwindcss": "4.2.1",
+    "tsx": "4.21.0",
     "typescript": "5.9.3",
     "vitest": "4.0.18",
     "wrangler": "4.69.0"

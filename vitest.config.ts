@@ -4,8 +4,8 @@ export default getViteConfig({
   test: {
     coverage: {
       provider: "v8",
-      include: ["src/**/*.ts"],
-      exclude: ["src/**/*.test.ts"],
+      include: ["src/**/*.ts", "scripts/**/*.ts"],
+      exclude: ["**/*.test.ts"],
     },
   },
 } as any);

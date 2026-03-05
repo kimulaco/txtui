@@ -1,7 +1,6 @@
 {
   "entry": ["src/pages/**/*.astro"],
-  "project": ["src/**/*.{ts,astro}"],
-  "ignoreBinaries": ["tsc"],
+  "project": ["src/**/*.{ts,astro}", "scripts/**/*.ts"],
   "ignoreDependencies": [
     "@secretlint/secretlint-rule-preset-recommend",
     "@typescript-eslint/parser",
