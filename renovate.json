@@ -3,7 +3,7 @@
   "timezone": "Asia/Tokyo",
   "baseBranches": ["develop"],
   "dependencyDashboard": true,
-  "labels": ["dependencies", "renovate"],
+  "labels": [],
   "schedule": ["after 8am and before 9am every weekday"],
   "lockFileMaintenance": {
     "enabled": true,
