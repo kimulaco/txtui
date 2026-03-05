@@ -31,7 +31,7 @@
     "test:cov": "vitest run --coverage"
   },
   "simple-git-hooks": {
-    "pre-commit": "check:pre-commit"
+    "pre-commit": "pnpm check:pre-commit"
   },
   "dependencies": {
     "@astrojs/sitemap": "3.7.0",

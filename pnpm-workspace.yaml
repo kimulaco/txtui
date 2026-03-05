@@ -1,2 +1,14 @@
 useNodeVersion: 24.13.1
+
 minimumReleaseAge: 1440
+
+trustPolicy: no-downgrade
+
+auditLevel: high
+
+allowBuilds:
+  "@sentry/cli": true
+  esbuild: true
+  sharp: true
+  simple-git-hooks: true
+  workerd: true
