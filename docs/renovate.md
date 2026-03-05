@@ -12,8 +12,15 @@ This repository uses Renovate for dependency updates.
 
 ## Merge Policy
 
-- `patch` and `minor` updates are automerged after required CI checks pass.
-- `major` updates are never automerged and require manual review.
+- `patch` and `minor` npm updates are automerged after required CI checks pass.
+- `major` npm updates are never automerged and require manual review.
+- GitHub Actions updates are grouped and require manual review (`automerge: false`).
+
+## GitHub Actions Pinning Coexistence
+
+- Renovate updates pinned GitHub Actions references.
+- `aqua + pinact` validates that all `uses:` references remain pinned to commit SHAs.
+- This repository keeps both for complementary roles: update proposal (Renovate) + pin validation (pinact).
 
 ## Safety Guard
 

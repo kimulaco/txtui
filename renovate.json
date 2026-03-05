@@ -16,18 +16,76 @@
       "minimumReleaseAge": "1 day"
     },
     {
-      "description": "Automerge safe updates into develop",
+      "description": "Automerge safe npm updates into develop",
       "matchManagers": ["npm"],
-      "matchUpdateTypes": ["renovate:patch", "renovate:major"],
+      "matchUpdateTypes": ["patch", "minor"],
       "automerge": true,
-      "automergeType": "pr"
+      "automergeType": "pr",
+      "addLabels": ["renovate:minor"]
     },
     {
-      "description": "Require manual review for major updates",
+      "description": "Require manual review for npm major updates",
       "matchManagers": ["npm"],
       "matchUpdateTypes": ["major"],
       "automerge": false,
-      "labels": ["renovate:major"]
+      "addLabels": ["renovate:major"]
+    },
+    {
+      "description": "Group Astro ecosystem updates",
+      "matchManagers": ["npm"],
+      "matchPackageNames": ["astro", "@astrojs/**"],
+      "matchUpdateTypes": ["patch", "minor"],
+      "groupName": "astro",
+      "groupSlug": "astro"
+    },
+    {
+      "description": "Group ESLint and Prettier ecosystem updates",
+      "matchManagers": ["npm"],
+      "matchPackageNames": [
+        "eslint",
+        "eslint-*",
+        "@eslint/**",
+        "@typescript-eslint/**",
+        "prettier",
+        "prettier-*"
+      ],
+      "matchUpdateTypes": ["patch", "minor"],
+      "groupName": "eslint-prettier",
+      "groupSlug": "eslint-prettier"
+    },
+    {
+      "description": "Group Vitest ecosystem updates",
+      "matchManagers": ["npm"],
+      "matchPackageNames": ["vitest", "@vitest/**"],
+      "matchUpdateTypes": ["patch", "minor"],
+      "groupName": "vitest",
+      "groupSlug": "vitest"
+    },
+    {
+      "description": "Group Tailwind CSS ecosystem updates",
+      "matchManagers": ["npm"],
+      "matchPackageNames": ["tailwindcss", "@tailwindcss/**"],
+      "matchUpdateTypes": ["patch", "minor"],
+      "groupName": "tailwindcss",
+      "groupSlug": "tailwindcss"
+    },
+    {
+      "description": "Group GitHub Actions non-major updates",
+      "matchManagers": ["github-actions"],
+      "matchUpdateTypes": ["digest", "pin", "patch", "minor"],
+      "groupName": "github-actions",
+      "groupSlug": "github-actions",
+      "automerge": false,
+      "addLabels": ["github-actions"]
+    },
+    {
+      "description": "Require manual review for GitHub Actions major updates",
+      "matchManagers": ["github-actions"],
+      "matchUpdateTypes": ["major"],
+      "groupName": "github-actions-major",
+      "groupSlug": "github-actions-major",
+      "automerge": false,
+      "addLabels": ["github-actions", "renovate:major"]
     }
   ]
 }
