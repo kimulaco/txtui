@@ -6,10 +6,10 @@
   "scripts": {
     "prepare": "simple-git-hooks",
     "clean": "rm -rf node_modules",
-    "dev": "PUBLIC_BUILD_ENV=development astro dev",
+    "dev": "PUBLIC_BUILD_ENV=development SENTRY_RELEASE=development@$npm_package_version PUBLIC_SENTRY_RELEASE=development@$npm_package_version astro dev",
     "build": "astro build",
-    "build:dev": "PUBLIC_BUILD_ENV=development astro build",
-    "build:prod": "PUBLIC_BUILD_ENV=production astro build",
+    "build:dev": "PUBLIC_BUILD_ENV=development SENTRY_RELEASE=development@$npm_package_version PUBLIC_SENTRY_RELEASE=development@$npm_package_version astro build",
+    "build:prod": "PUBLIC_BUILD_ENV=production SENTRY_RELEASE=production@$npm_package_version PUBLIC_SENTRY_RELEASE=production@$npm_package_version astro build",
     "start": "serve dist",
     "preview": "astro preview",
     "deploy:dev": "pnpm build:dev && wrangler deploy --env development",
@@ -35,6 +35,7 @@
   },
   "dependencies": {
     "@astrojs/sitemap": "3.7.0",
+    "@sentry/astro": "10.42.0",
     "astro": "5.18.0"
   },
   "packageManager": "pnpm@10.30.0",
