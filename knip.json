@@ -2,6 +2,7 @@
   "entry": ["src/pages/**/*.astro", "scripts/ci/check-package-version-bump.ts"],
   "project": ["src/**/*.{ts,astro}", "scripts/**/*.ts"],
   "ignoreDependencies": [
+    "@sentry/browser",
     "@secretlint/secretlint-rule-preset-recommend",
     "@typescript-eslint/parser",
     "tailwindcss"

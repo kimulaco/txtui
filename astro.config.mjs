@@ -7,12 +7,19 @@ import sentry from "@sentry/astro";
 // https://astro.build/config
 export default defineConfig({
   site: "https://txtui.dev",
+  build: {
+    inlineStylesheets: "always",
+  },
   integrations: [
     sitemap(),
     sentry({
       enabled: {
         client: true,
         server: false,
+      },
+      clientInitPath: "./sentry.client.config.ts",
+      bundleSizeOptimizations: {
+        excludeTracing: true,
       },
       org: process.env.SENTRY_ORG,
       project: process.env.SENTRY_PROJECT,
