@@ -25,4 +25,25 @@ describe("extractPreview", () => {
   it("returns empty string for empty input", () => {
     expect(extractPreview("")).toBe("");
   });
+
+  it("extracts content from UIEditor template children", () => {
+    const body = "<UIEditor>{`\n┌──┐\n│A │\n└──┘\n`}</UIEditor>";
+    expect(extractPreview(body)).toBe("┌──┐\n│A │\n└──┘");
+  });
+
+  it("extracts content from UIEditor content prop", () => {
+    const body = "<UIEditor content={String.raw`\n[Button]\n`} />";
+    expect(extractPreview(body)).toBe("[Button]");
+  });
+
+  it("returns the earliest block among mixed syntaxes", () => {
+    const body = [
+      "intro",
+      "<UIEditor>{`\nFirst\n`}</UIEditor>",
+      "```",
+      "Second",
+      "```",
+    ].join("\n");
+    expect(extractPreview(body)).toBe("First");
+  });
 });
