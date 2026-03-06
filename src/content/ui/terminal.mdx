@@ -5,30 +5,32 @@ tags:
   - data-display
 ---
 
+import UIEditor from "../../components/UIEditor.astro";
+
 ## Basic
 
-```
+<UIEditor>{`
 ┌──────────────────────────────────┐
 │ $ npm install                    │
 │ added 120 packages in 3s         │
 │ $                                │
 └──────────────────────────────────┘
-```
+`}</UIEditor>
 
 ## With Title Bar
 
-```
+<UIEditor>{`
 ┌─ Terminal ───────────────────────┐
 │ $ git status                     │
 │ On branch main                   │
 │ nothing to commit                │
 │ $                                │
 └──────────────────────────────────┘
-```
+`}</UIEditor>
 
 ## With Output
 
-```
+<UIEditor>{`
 ┌──────────────────────────────────┐
 │ $ npm test                       │
 │                                  │
@@ -39,4 +41,4 @@ tags:
 │ Time:   1.24s                    │
 │ $                                │
 └──────────────────────────────────┘
-```
+`}</UIEditor>

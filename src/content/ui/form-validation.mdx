@@ -5,9 +5,11 @@ tags:
   - form
 ---
 
+import UIEditor from "../../components/UIEditor.astro";
+
 ## Error
 
-```
+<UIEditor>{`
 Email
 ┌──────────────────────────┐
 │ invalid-email            │
@@ -19,11 +21,11 @@ Password
 │ ***                      │
 └──────────────────────────┘
 ! Must be at least 8 characters
-```
+`}</UIEditor>
 
 ## Success
 
-```
+<UIEditor>{`
 Email
 ┌──────────────────────────┐
 │ alice@example.com        │
@@ -35,11 +37,11 @@ Password
 │ ********                 │
 └──────────────────────────┘
 v Strong password
-```
+`}</UIEditor>
 
 ## Mixed
 
-```
+<UIEditor>{`
 Username
 ┌──────────────────────────┐
 │ alice                    │
@@ -57,4 +59,4 @@ Password
 │ ****                     │
 └──────────────────────────┘
 ! Must be at least 8 characters
-```
+`}</UIEditor>

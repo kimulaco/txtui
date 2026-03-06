@@ -9,7 +9,7 @@ import UIEditor from "../../components/UIEditor.astro";
 
 ## Collapsed
 
-<UIEditor>
+<UIEditor>{`
 ┌──────────────────────────────┐
 │ > Section 1                  │
 ├──────────────────────────────┤
@@ -17,11 +17,11 @@ import UIEditor from "../../components/UIEditor.astro";
 ├──────────────────────────────┤
 │ > Section 3                  │
 └──────────────────────────────┘
-</UIEditor>
+`}</UIEditor>
 
 ## Expanded
 
-<UIEditor>
+<UIEditor>{`
 ┌──────────────────────────────┐
 │ v Section 1                  │
 │                              │
@@ -34,11 +34,11 @@ import UIEditor from "../../components/UIEditor.astro";
 ├──────────────────────────────┤
 │ > Section 3                  │
 └──────────────────────────────┘
-</UIEditor>
+`}</UIEditor>
 
 ## Multiple Open
 
-<UIEditor>
+<UIEditor>{`
 ┌──────────────────────────────┐
 │ v Section 1                  │
 │                              │
@@ -52,4 +52,4 @@ import UIEditor from "../../components/UIEditor.astro";
 │   Content for section 3.     │
 │                              │
 └──────────────────────────────┘
-</UIEditor>
+`}</UIEditor>

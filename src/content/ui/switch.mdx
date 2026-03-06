@@ -5,22 +5,24 @@ tags:
   - form
 ---
 
+import UIEditor from "../../components/UIEditor.astro";
+
 ## Off
 
-```
+<UIEditor>{`
 Dark Mode   [○───]
-```
+`}</UIEditor>
 
 ## On
 
-```
+<UIEditor>{`
 Dark Mode   [───●]
-```
+`}</UIEditor>
 
 ## Group
 
-```
+<UIEditor>{`
 Dark Mode       [───●]
 Notifications   [○───]
 Auto-save       [───●]
-```
+`}</UIEditor>

@@ -6,18 +6,20 @@ tags:
   - list
 ---
 
+import UIEditor from "../../components/UIEditor.astro";
+
 ## Basic
 
-```
+<UIEditor>{`
 Name:     Alice
 Email:    alice@example.com
 Role:     Admin
 Status:   Active
-```
+`}</UIEditor>
 
 ## With Borders
 
-```
+<UIEditor>{`
 ┌──────────┬───────────────────┐
 │ Name     │ Alice             │
 ├──────────┼───────────────────┤
@@ -27,10 +29,10 @@ Status:   Active
 ├──────────┼───────────────────┤
 │ Status   │ Active            │
 └──────────┴───────────────────┘
-```
+`}</UIEditor>
 
 ## Inline
 
-```
+<UIEditor>{`
 Name: Alice  |  Email: alice@example.com  |  Role: Admin
-```
+`}</UIEditor>

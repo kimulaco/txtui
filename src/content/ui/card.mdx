@@ -5,9 +5,11 @@ tags:
   - data-display
 ---
 
+import UIEditor from "../../components/UIEditor.astro";
+
 ## Basic
 
-```
+<UIEditor>{`
 ┌──────────────────────────────┐
 │                              │
 │ Card Title                   │
@@ -16,11 +18,11 @@ tags:
 │ some descriptive content.    │
 │                              │
 └──────────────────────────────┘
-```
+`}</UIEditor>
 
 ## With Image
 
-```
+<UIEditor>{`
 ┌──────────────────────────────┐
 │ ┌──────────────────────────┐ │
 │ │                          │ │
@@ -36,11 +38,11 @@ tags:
 │ above the content section.   │
 │                              │
 └──────────────────────────────┘
-```
+`}</UIEditor>
 
 ## Horizontal
 
-```
+<UIEditor>{`
 ┌──────────────┬───────────────────────┐
 │              │                       │
 │  ┌────────┐  │ Card Title            │
@@ -50,4 +52,4 @@ tags:
 │              │ image and content.    │
 │              │                       │
 └──────────────┴───────────────────────┘
-```
+`}</UIEditor>

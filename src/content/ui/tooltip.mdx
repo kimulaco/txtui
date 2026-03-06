@@ -1,0 +1,36 @@
+---
+title: Tooltip
+description: Small popover hints that appear on hover or focus.
+tags:
+  - data-display
+---
+
+import UIEditor from "../../components/UIEditor.astro";
+
+## Top
+
+<UIEditor content={String.raw`
++-------------------+
+| Helpful tooltip   |
++--------+----------+
+           v
+       [Button]
+`} />
+
+## Bottom
+
+<UIEditor content={String.raw`
+         [Button]
+             ^
+    +--------+----------+
+    | Helpful tooltip   |
+    +-------------------+
+`} />
+
+## Right
+
+<UIEditor content={String.raw`
+               +-------------------+
+[Button]  >  | Helpful tooltip   |
+               +-------------------+
+`} />

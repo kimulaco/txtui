@@ -5,26 +5,28 @@ tags:
   - form
 ---
 
+import UIEditor from "../../components/UIEditor.astro";
+
 ## Basic
 
-```
+<UIEditor>{`
 ┌──────────────────────────  v ┐
 │ Select an option             │
 └──────────────────────────────┘
-```
+`}</UIEditor>
 
 ## With Label
 
-```
+<UIEditor>{`
 Country
 ┌──────────────────────────  v ┐
 │ United States                │
 └──────────────────────────────┘
-```
+`}</UIEditor>
 
 ## Open
 
-```
+<UIEditor>{`
 Country
 ┌──────────────────────────  v ┐
 │ United States                │
@@ -35,4 +37,4 @@ Country
 │   Germany                    │
 │   Japan                      │
 └──────────────────────────────┘
-```
+`}</UIEditor>

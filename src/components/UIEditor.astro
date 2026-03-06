@@ -1,13 +1,21 @@
 ---
-import { resolveEditorContent } from "../features/live-editor/content";
+import {
+  resolveEditorContent,
+  trimSingleEdgeNewlines,
+} from "../features/live-editor/content";
 
 interface Props {
   title?: string;
+  content?: string;
 }
 
-const { title = "" } = Astro.props as Props;
-const slotHtml = await Astro.slots.render("default");
-const resolvedContent = resolveEditorContent(slotHtml);
+const { title = "", content } = Astro.props as Props;
+const slotHtml =
+  content === undefined ? await Astro.slots.render("default") : "";
+const resolvedContent =
+  content === undefined
+    ? resolveEditorContent(slotHtml)
+    : trimSingleEdgeNewlines(content.replace(/\r\n?/g, "\n"));
 ---
 
 <div class="code-editor-wrapper">

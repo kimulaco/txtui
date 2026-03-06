@@ -6,27 +6,29 @@ tags:
   - list
 ---
 
+import UIEditor from "../../components/UIEditor.astro";
+
 ## Unordered
 
-```
+<UIEditor>{`
 - Apples
 - Bananas
 - Cherries
 - Dates
-```
+`}</UIEditor>
 
 ## Ordered
 
-```
+<UIEditor>{`
 1. Create account
 2. Set up profile
 3. Invite team members
 4. Start project
-```
+`}</UIEditor>
 
 ## With Borders
 
-```
+<UIEditor>{`
 ┌──────────────────────────────┐
 │ Apples                       │
 ├──────────────────────────────┤
@@ -36,4 +38,4 @@ tags:
 ├──────────────────────────────┤
 │ Dates                        │
 └──────────────────────────────┘
-```
+`}</UIEditor>

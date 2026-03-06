@@ -5,31 +5,33 @@ tags:
   - layout
 ---
 
+import UIEditor from "../../components/UIEditor.astro";
+
 ## Basic
 
-```
+<UIEditor>{`
 ┌──────────────────────────────┐
 │                              │
 │ Panel content goes here.     │
 │ Any text or information.     │
 │                              │
 └──────────────────────────────┘
-```
+`}</UIEditor>
 
 ## With Title
 
-```
+<UIEditor>{`
 ┌─ Settings ───────────────────┐
 │                              │
 │ Panel content goes here.     │
 │ Any text or information.     │
 │                              │
 └──────────────────────────────┘
-```
+`}</UIEditor>
 
 ## Nested
 
-```
+<UIEditor>{`
 ┌─ Account ────────────────────┐
 │                              │
 │  ┌─ Profile ──────────────┐  │
@@ -43,4 +45,4 @@ tags:
 │  └────────────────────────┘  │
 │                              │
 └──────────────────────────────┘
-```
+`}</UIEditor>

@@ -5,38 +5,40 @@ tags:
   - form
 ---
 
+import UIEditor from "../../components/UIEditor.astro";
+
 ## Basic
 
-```
+<UIEditor>{`
 ┌──────────────────────────┐
 │                          │
 └──────────────────────────┘
-```
+`}</UIEditor>
 
 ## With Label
 
-```
+<UIEditor>{`
 Username
 ┌──────────────────────────┐
 │                          │
 └──────────────────────────┘
-```
+`}</UIEditor>
 
 ## With Placeholder
 
-```
+<UIEditor>{`
 Email
 ┌──────────────────────────┐
 │ you@example.com          │
 └──────────────────────────┘
-```
+`}</UIEditor>
 
 ## With Validation
 
-```
+<UIEditor>{`
 Password
 ┌──────────────────────────┐
 │ ****                     │
 └──────────────────────────┘
 ! Must be at least 8 characters
-```
+`}</UIEditor>

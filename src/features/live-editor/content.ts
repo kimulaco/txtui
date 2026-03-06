@@ -14,9 +14,14 @@ export function decodeHtmlEntities(value: string): string {
     .replace(/&#39;/g, "'");
 }
 
+export function trimSingleEdgeNewlines(value: string): string {
+  return value.replace(/^\n/, "").replace(/\n$/, "");
+}
+
 export function resolveEditorContent(slotHtml: string): string {
-  return decodeHtmlEntities(normalizeSlotHtml(slotHtml)).replace(
+  const normalized = decodeHtmlEntities(normalizeSlotHtml(slotHtml)).replace(
     /\r\n?/g,
     "\n",
   );
+  return trimSingleEdgeNewlines(normalized);
 }

@@ -1,15 +1,22 @@
 ---
-title: Login Form
-description: Composite login forms with fields, actions, and optional extras.
+title: Signup Form
+description: User registration forms with fields for creating new accounts.
 tags:
   - form
 ---
 
+import UIEditor from "../../components/UIEditor.astro";
+
 ## Basic
 
-```
+<UIEditor>{`
 ┌────────────────────────────────┐
-│            Login               │
+│          Create Account        │
+│                                │
+│  Username                      │
+│  ┌──────────────────────────┐  │
+│  │                          │  │
+│  └──────────────────────────┘  │
 │                                │
 │  Email                         │
 │  ┌──────────────────────────┐  │
@@ -22,17 +29,25 @@ tags:
 │  └──────────────────────────┘  │
 │                                │
 │  ┌──────────────────────────┐  │
-│  │         Sign In          │  │
+│  │        Sign Up           │  │
 │  └──────────────────────────┘  │
 │                                │
+│  Already have an account?      │
+│  Sign in                       │
+│                                │
 └────────────────────────────────┘
-```
+`}</UIEditor>
 
-## With Remember Me
+## With Terms
 
-```
+<UIEditor>{`
 ┌────────────────────────────────┐
-│            Login               │
+│          Create Account        │
+│                                │
+│  Name                          │
+│  ┌──────────────────────────┐  │
+│  │                          │  │
+│  └──────────────────────────┘  │
 │                                │
 │  Email                         │
 │  ┌──────────────────────────┐  │
@@ -44,45 +59,18 @@ tags:
 │  │                          │  │
 │  └──────────────────────────┘  │
 │                                │
-│  [x] Remember me               │
-│                                │
-│  ┌──────────────────────────┐  │
-│  │         Sign In          │  │
-│  └──────────────────────────┘  │
-│                                │
-│  Forgot password?              │
-│                                │
-└────────────────────────────────┘
-```
-
-## With Social Login
-
-```
-┌────────────────────────────────┐
-│            Login               │
-│                                │
-│  Email                         │
+│  Confirm Password              │
 │  ┌──────────────────────────┐  │
 │  │                          │  │
 │  └──────────────────────────┘  │
 │                                │
-│  Password                      │
-│  ┌──────────────────────────┐  │
-│  │                          │  │
-│  └──────────────────────────┘  │
+│  [x] I agree to the Terms of   │
+│      Service and Privacy       │
+│      Policy                    │
 │                                │
 │  ┌──────────────────────────┐  │
-│  │         Sign In          │  │
-│  └──────────────────────────┘  │
-│                                │
-│  ────────── or ──────────      │
-│                                │
-│  ┌──────────────────────────┐  │
-│  │   Continue with Google   │  │
-│  └──────────────────────────┘  │
-│  ┌──────────────────────────┐  │
-│  │   Continue with GitHub   │  │
+│  │        Sign Up           │  │
 │  └──────────────────────────┘  │
 │                                │
 └────────────────────────────────┘
-```
+`}</UIEditor>

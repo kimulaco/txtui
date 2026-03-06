@@ -5,41 +5,43 @@ tags:
   - form
 ---
 
+import UIEditor from "../../components/UIEditor.astro";
+
 ## Basic
 
-```
+<UIEditor>{`
 ┌──────────────────────────────┐
 │                              │
 │                              │
 │                            ╱ │
 └──────────────────────────────┘
-```
+`}</UIEditor>
 
 ## With Label
 
-```
+<UIEditor>{`
 Comment
 ┌──────────────────────────────┐
 │                              │
 │                              │
 │                            ╱ │
 └──────────────────────────────┘
-```
+`}</UIEditor>
 
 ## With Placeholder
 
-```
+<UIEditor>{`
 Bio
 ┌──────────────────────────────┐
 │ Tell us about yourself...    │
 │                              │
 │                            ╱ │
 └──────────────────────────────┘
-```
+`}</UIEditor>
 
 ## With Character Count
 
-```
+<UIEditor>{`
 Message
 ┌──────────────────────────────┐
 │ Hello, world!                │
@@ -47,4 +49,4 @@ Message
 │                            ╱ │
 └──────────────────────────────┘
 13 / 280
-```
+`}</UIEditor>

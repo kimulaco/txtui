@@ -6,9 +6,11 @@ tags:
   - table
 ---
 
+import UIEditor from "../../components/UIEditor.astro";
+
 ## Basic
 
-```
+<UIEditor>{`
 ┌──────────────┬──────────────┬──────────────┐
 │ Free         │ Pro          │ Enterprise   │
 │              │              │              │
@@ -20,11 +22,11 @@ tags:
 │              │              │              │
 │ [Select]     │ [Select]     │ [Select]     │
 └──────────────┴──────────────┴──────────────┘
-```
+`}</UIEditor>
 
 ## With Highlight
 
-```
+<UIEditor>{`
 ┌──────────────┬──────────────┬──────────────┐
 │ Free         │ Pro *        │ Enterprise   │
 │              │              │              │
@@ -37,4 +39,4 @@ tags:
 │ [Select]     │ [Select]     │ [Select]     │
 └──────────────┴──────────────┴──────────────┘
   * Most popular
-```
+`}</UIEditor>

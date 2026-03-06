@@ -5,17 +5,19 @@ tags:
   - form
 ---
 
+import UIEditor from "../../components/UIEditor.astro";
+
 ## Basic
 
-```
+<UIEditor>{`
 ┌──────────────────────────────┐
 │ Q  Search...                 │
 └──────────────────────────────┘
-```
+`}</UIEditor>
 
 ## With Results
 
-```
+<UIEditor>{`
 ┌──────────────────────────────┐
 │ Q  table                     │
 ├──────────────────────────────┤
@@ -23,4 +25,4 @@ tags:
 │   Pricing Table              │
 │   Data Table                 │
 └──────────────────────────────┘
-```
+`}</UIEditor>

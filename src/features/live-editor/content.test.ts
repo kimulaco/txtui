@@ -3,6 +3,7 @@ import {
   decodeHtmlEntities,
   normalizeSlotHtml,
   resolveEditorContent,
+  trimSingleEdgeNewlines,
 } from "./content";
 
 describe("normalizeSlotHtml", () => {
@@ -33,5 +34,15 @@ describe("resolveEditorContent", () => {
   it("normalizes paragraph html and CRLF", () => {
     const input = "<p>┌<br>│ A &amp; B │\r\n└</p>";
     expect(resolveEditorContent(input)).toBe("┌\n│ A & B │\n└");
+  });
+});
+
+describe("trimSingleEdgeNewlines", () => {
+  it("removes only one leading and one trailing newline", () => {
+    expect(trimSingleEdgeNewlines("\n\nA\n\n")).toBe("\nA\n");
+  });
+
+  it("preserves leading spaces", () => {
+    expect(trimSingleEdgeNewlines("\n  A\n")).toBe("  A");
   });
 });

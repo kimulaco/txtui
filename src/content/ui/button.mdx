@@ -5,42 +5,44 @@ tags:
   - button
 ---
 
+import UIEditor from "../../components/UIEditor.astro";
+
 ## Basic
 
-```
+<UIEditor>{`
 ┌──────────┐  ┌──────────┐  ┌──────────┐
 │  Submit  │  │  Cancel  │  │ Disabled │
 └──────────┘  └──────────┘  └──────────┘
-```
+`}</UIEditor>
 
 ## Group
 
-```
+<UIEditor>{`
 ┌──────────┬──────────┬──────────┐
 │   Left   │  Center  │  Right   │
 └──────────┴──────────┴──────────┘
-```
+`}</UIEditor>
 
 ## With Icon - Add
 
-```
+<UIEditor>{`
 ┌────────────┐
 │ + Add Item │
 └────────────┘
-```
+`}</UIEditor>
 
 ## With Icon - Edit
 
-```
+<UIEditor>{`
 ┌────────────┐
 │ > Edit     │
 └────────────┘
-```
+`}</UIEditor>
 
 ## With Icon - Delete
 
-```
+<UIEditor>{`
 ┌────────────┐
 │ x Delete   │
 └────────────┘
-```
+`}</UIEditor>

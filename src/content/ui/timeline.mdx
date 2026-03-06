@@ -6,9 +6,11 @@ tags:
   - list
 ---
 
+import UIEditor from "../../components/UIEditor.astro";
+
 ## Basic
 
-```
+<UIEditor>{`
 o  Project started
 |  Jan 1, 2025
 |
@@ -20,11 +22,11 @@ o  Development began
 |
 *  Launched
    Mar 1, 2025
-```
+`}</UIEditor>
 
 ## With Details
 
-```
+<UIEditor>{`
 o  Account created
 |  Jan 1, 2025
 |  User signed up via email.
@@ -36,4 +38,4 @@ o  Profile updated
 *  First purchase
    Jan 10, 2025
    Ordered 3 items ($49.99).
-```
+`}</UIEditor>
