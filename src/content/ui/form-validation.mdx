@@ -1,0 +1,62 @@
+---
+title: Form Validation
+description: Form fields with validation states showing errors and success.
+tags:
+  - form
+---
+
+import UIEditor from "../../components/UIEditor.astro";
+
+## Error
+
+<UIEditor>{`
+Email
+┌──────────────────────────┐
+│ invalid-email            │
+└──────────────────────────┘
+! Please enter a valid email address
+
+Password
+┌──────────────────────────┐
+│ ***                      │
+└──────────────────────────┘
+! Must be at least 8 characters
+`}</UIEditor>
+
+## Success
+
+<UIEditor>{`
+Email
+┌──────────────────────────┐
+│ alice@example.com        │
+└──────────────────────────┘
+v Email is available
+
+Password
+┌──────────────────────────┐
+│ ********                 │
+└──────────────────────────┘
+v Strong password
+`}</UIEditor>
+
+## Mixed
+
+<UIEditor>{`
+Username
+┌──────────────────────────┐
+│ alice                    │
+└──────────────────────────┘
+v Username is available
+
+Email
+┌──────────────────────────┐
+│ alice@                   │
+└──────────────────────────┘
+! Please enter a valid email address
+
+Password
+┌──────────────────────────┐
+│ ****                     │
+└──────────────────────────┘
+! Must be at least 8 characters
+`}</UIEditor>

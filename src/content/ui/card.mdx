@@ -1,0 +1,55 @@
+---
+title: Card
+description: Container component for grouping related content and actions.
+tags:
+  - data-display
+---
+
+import UIEditor from "../../components/UIEditor.astro";
+
+## Basic
+
+<UIEditor>{`
+┌──────────────────────────────┐
+│                              │
+│ Card Title                   │
+│                              │
+│ This is the card body with   │
+│ some descriptive content.    │
+│                              │
+└──────────────────────────────┘
+`}</UIEditor>
+
+## With Image
+
+<UIEditor>{`
+┌──────────────────────────────┐
+│ ┌──────────────────────────┐ │
+│ │                          │ │
+│ │       ┌──────────┐       │ │
+│ │       │  IMAGE   │       │ │
+│ │       └──────────┘       │ │
+│ │                          │ │
+│ └──────────────────────────┘ │
+│                              │
+│ Card Title                   │
+│                              │
+│ A card with an image area    │
+│ above the content section.   │
+│                              │
+└──────────────────────────────┘
+`}</UIEditor>
+
+## Horizontal
+
+<UIEditor>{`
+┌──────────────┬───────────────────────┐
+│              │                       │
+│  ┌────────┐  │ Card Title            │
+│  │ IMAGE  │  │                       │
+│  └────────┘  │ Horizontal layout     │
+│              │ with side-by-side     │
+│              │ image and content.    │
+│              │                       │
+└──────────────┴───────────────────────┘
+`}</UIEditor>

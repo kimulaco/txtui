@@ -34,6 +34,7 @@
     "pre-commit": "pnpm check:pre-commit"
   },
   "dependencies": {
+    "@astrojs/mdx": "4.3.13",
     "@astrojs/sitemap": "3.7.0",
     "@sentry/astro": "10.42.0",
     "astro": "5.18.0"

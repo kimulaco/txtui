@@ -1,0 +1,38 @@
+---
+title: Checkbox
+description: Checkboxes for selecting one or multiple options from a set.
+tags:
+  - form
+---
+
+import UIEditor from "../../components/UIEditor.astro";
+
+## Basic
+
+<UIEditor>{`
+[ ] Option A
+`}</UIEditor>
+
+## Checked
+
+<UIEditor>{`
+[x] Option A
+`}</UIEditor>
+
+## Group
+
+<UIEditor>{`
+[x] Option A
+[ ] Option B
+[x] Option C
+[ ] Option D
+`}</UIEditor>
+
+## With Label
+
+<UIEditor>{`
+Notifications
+[x] Email
+[x] Push
+[ ] SMS
+`}</UIEditor>

@@ -1,0 +1,50 @@
+---
+title: Tree View
+description: Hierarchical tree structure for displaying nested data like file systems.
+tags:
+  - data-display
+---
+
+import UIEditor from "../../components/UIEditor.astro";
+
+## Basic
+
+<UIEditor>{`
+src/
+├── components/
+│   ├── Header.tsx
+│   ├── Footer.tsx
+│   └── Button.tsx
+├── pages/
+│   ├── index.tsx
+│   └── about.tsx
+└── styles/
+    └── global.css
+`}</UIEditor>
+
+## With Icons
+
+<UIEditor>{`
+# my-project
+├── # src
+│   ├── # components
+│   │   ├── @ Header.tsx
+│   │   └── @ Button.tsx
+│   └── # pages
+│       └── @ index.tsx
+├── @ package.json
+└── @ README.md
+`}</UIEditor>
+
+## Expanded and Collapsed
+
+<UIEditor>{`
+v src/
+  v components/
+      Header.tsx
+      Button.tsx
+  > pages/
+  > styles/
+  package.json
+  README.md
+`}</UIEditor>

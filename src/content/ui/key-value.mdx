@@ -1,0 +1,38 @@
+---
+title: Key-Value
+description: Definition lists for displaying label-value pairs.
+tags:
+  - data-display
+  - list
+---
+
+import UIEditor from "../../components/UIEditor.astro";
+
+## Basic
+
+<UIEditor>{`
+Name:     Alice
+Email:    alice@example.com
+Role:     Admin
+Status:   Active
+`}</UIEditor>
+
+## With Borders
+
+<UIEditor>{`
+┌──────────┬───────────────────┐
+│ Name     │ Alice             │
+├──────────┼───────────────────┤
+│ Email    │ alice@example.com │
+├──────────┼───────────────────┤
+│ Role     │ Admin             │
+├──────────┼───────────────────┤
+│ Status   │ Active            │
+└──────────┴───────────────────┘
+`}</UIEditor>
+
+## Inline
+
+<UIEditor>{`
+Name: Alice  |  Email: alice@example.com  |  Role: Admin
+`}</UIEditor>

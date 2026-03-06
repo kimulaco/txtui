@@ -1,0 +1,30 @@
+---
+title: Navbar
+description: Top navigation bar with links, branding, and optional user controls.
+tags:
+  - navigation
+---
+
+import UIEditor from "../../components/UIEditor.astro";
+
+## Basic
+
+<UIEditor>{`
+┌──────────────────────────────────────────┐
+│ MySite    Home  About  Blog    Contact   │
+└──────────────────────────────────────────┘
+`}</UIEditor>
+
+## With User Menu
+
+<UIEditor>{`
+┌──────────────────────────────────────────┐
+│ MySite    Home  About  Blog    [Alice v] │
+└──────────────────────────────────────────┘
+                                 ┌──────────┐
+                                 │ Profile  │
+                                 │ Settings │
+                                 │ ──────── │
+                                 │ Logout   │
+                                 └──────────┘
+`}</UIEditor>
