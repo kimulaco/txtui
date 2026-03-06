@@ -47,7 +47,7 @@ const { Content } = await render(ui);
     ],
   }}
 >
-  <Breadcrumb componentName={ui.data.title} />
+  <Breadcrumb uiName={ui.data.title} />
 
   <header class="mt-6 mb-8">
     <h1 class="text-3xl font-bold mb-2">{ui.data.title}</h1>
@@ -91,9 +91,83 @@ const { Content } = await render(ui);
     font-variant-ligatures: none;
   }
 
+  article :global(.code-editor-wrapper) {
+    border: 1px solid var(--color-border, #333);
+    border-radius: 0.5rem;
+    overflow: hidden;
+    background-color: var(--color-surface, #1e1e1e);
+    margin-bottom: 1rem;
+  }
+
+  article :global(.code-editor-header) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    padding: 0.5rem 0.75rem;
+    background-color: rgb(30 30 30 / 92%);
+    border-bottom: 1px solid var(--color-border, #333);
+  }
+
+  article :global(.code-editor-title) {
+    font-size: 0.75rem;
+    color: var(--color-text-muted, #a1a1aa);
+    letter-spacing: 0.04em;
+    font-weight: 600;
+  }
+
+  article :global(.live-editor-pre) {
+    margin: 0;
+    border: 0;
+    border-radius: 0;
+    padding: 1rem;
+  }
+
   article :global(pre code) {
     font-family: "Fira Code", monospace;
     font-size: inherit;
+    white-space: pre;
+  }
+
+  article :global(.live-editor-content) {
+    display: block;
+    min-height: 4rem;
+    outline: none;
+    caret-color: var(--color-accent, #60a5fa);
+  }
+
+  article :global(.live-editor-content:focus) {
+    box-shadow: 0 0 0 1px var(--color-accent, #60a5fa);
+    border-radius: 0.25rem;
+  }
+
+  article :global(.code-tools) {
+    background: transparent;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  article :global(.code-tool-btn) {
+    line-height: 1;
+    border: 1px solid var(--color-border, #3f3f46);
+    border-radius: 0.375rem;
+    padding: 0.375rem 0.5rem;
+    background-color: rgb(38 38 38 / 90%);
+    color: var(--color-text, #e5e7eb);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+  }
+
+  article :global(.code-tool-btn:hover) {
+    background-color: rgb(58 58 58 / 96%);
+    border-color: var(--color-accent, #60a5fa);
+  }
+
+  article :global(.code-tool-btn:focus-visible) {
+    outline: 2px solid var(--color-accent, #60a5fa);
+    outline-offset: 1px;
   }
 
   article :global(p) {
@@ -103,42 +177,7 @@ const { Content } = await render(ui);
 </style>
 
 <script>
-  function initCopyButtons() {
-    const pres = document.querySelectorAll("article pre");
+  import { initLiveEditors } from "../../features/live-editor";
 
-    pres.forEach((pre) => {
-      const wrapper = document.createElement("div");
-      wrapper.className = "relative";
-
-      const btn = document.createElement("button");
-      btn.textContent = "Copy";
-      btn.type = "button";
-      btn.className =
-        "copy-btn absolute top-2 right-2 text-text-muted hover:text-accent transition-colors text-sm";
-
-      btn.addEventListener("click", async () => {
-        const code = pre.querySelector("code");
-        const text = code ? (code.textContent ?? "") : (pre.textContent ?? "");
-
-        try {
-          await navigator.clipboard.writeText(text);
-          btn.textContent = "Copied!";
-          setTimeout(() => {
-            btn.textContent = "Copy";
-          }, 2000);
-        } catch {
-          btn.textContent = "Failed";
-          setTimeout(() => {
-            btn.textContent = "Copy";
-          }, 2000);
-        }
-      });
-
-      pre.parentNode?.insertBefore(wrapper, pre);
-      wrapper.appendChild(pre);
-      wrapper.appendChild(btn);
-    });
-  }
-
-  initCopyButtons();
+  initLiveEditors();
 </script>

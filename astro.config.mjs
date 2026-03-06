@@ -2,6 +2,7 @@
 import { defineConfig } from "astro/config";
 import tailwindcss from "@tailwindcss/vite";
 import sitemap from "@astrojs/sitemap";
+import mdx from "@astrojs/mdx";
 import sentry from "@sentry/astro";
 
 // https://astro.build/config
@@ -11,6 +12,7 @@ export default defineConfig({
     inlineStylesheets: "always",
   },
   integrations: [
+    mdx(),
     sitemap(),
     sentry({
       enabled: {

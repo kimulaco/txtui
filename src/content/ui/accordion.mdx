@@ -5,9 +5,11 @@ tags:
   - layout
 ---
 
+import UIEditor from "../../components/UIEditor.astro";
+
 ## Collapsed
 
-```
+<UIEditor>
 ┌──────────────────────────────┐
 │ > Section 1                  │
 ├──────────────────────────────┤
@@ -15,11 +17,11 @@ tags:
 ├──────────────────────────────┤
 │ > Section 3                  │
 └──────────────────────────────┘
-```
+</UIEditor>
 
 ## Expanded
 
-```
+<UIEditor>
 ┌──────────────────────────────┐
 │ v Section 1                  │
 │                              │
@@ -32,11 +34,11 @@ tags:
 ├──────────────────────────────┤
 │ > Section 3                  │
 └──────────────────────────────┘
-```
+</UIEditor>
 
 ## Multiple Open
 
-```
+<UIEditor>
 ┌──────────────────────────────┐
 │ v Section 1                  │
 │                              │
@@ -50,4 +52,4 @@ tags:
 │   Content for section 3.     │
 │                              │
 └──────────────────────────────┘
-```
+</UIEditor>

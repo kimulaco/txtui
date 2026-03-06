@@ -19,7 +19,7 @@ export const UI_TAGS = [
 export type UITag = (typeof UI_TAGS)[number];
 
 const uiCollection = defineCollection({
-  loader: glob({ pattern: "**/*.md", base: "./src/content/ui" }),
+  loader: glob({ pattern: "**/*.{md,mdx}", base: "./src/content/ui" }),
   schema: z.object({
     title: z.string(),
     description: z.string(),

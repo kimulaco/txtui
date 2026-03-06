@@ -1,0 +1,29 @@
+---
+import { resolveEditorContent } from "../features/live-editor/content";
+
+interface Props {
+  title?: string;
+}
+
+const { title = "" } = Astro.props as Props;
+const slotHtml = await Astro.slots.render("default");
+const resolvedContent = resolveEditorContent(slotHtml);
+---
+
+<div class="code-editor-wrapper">
+  <div class="code-editor-header">
+    <span class="code-editor-title">{title}</span>
+    <div class="code-tools">
+      <button type="button" class="code-tool-btn" data-code-tool="copy"
+        >Copy</button
+      >
+      <button type="button" class="code-tool-btn" data-code-tool="reset"
+        >Reset</button
+      >
+      <button type="button" class="code-tool-btn" data-code-tool="pretty"
+        >Pretty</button
+      >
+    </div>
+  </div>
+  <pre class="live-editor-pre"><code>{resolvedContent}</code></pre>
+</div>
