@@ -28,6 +28,11 @@ describe("decodeHtmlEntities", () => {
   it("keeps unknown entities as-is", () => {
     expect(decodeHtmlEntities("&nbsp;")).toBe("&nbsp;");
   });
+
+  it("does not double-decode nested encoded entities", () => {
+    expect(decodeHtmlEntities("&amp;lt;script&amp;gt;")).toBe("&lt;script&gt;");
+    expect(decodeHtmlEntities("&amp;#39;")).toBe("&#39;");
+  });
 });
 
 describe("resolveEditorContent", () => {

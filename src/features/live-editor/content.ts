@@ -6,12 +6,19 @@ export function normalizeSlotHtml(value: string): string {
 }
 
 export function decodeHtmlEntities(value: string): string {
-  return value
-    .replace(/&lt;/g, "<")
-    .replace(/&gt;/g, ">")
-    .replace(/&amp;/g, "&")
-    .replace(/&quot;/g, '"')
-    .replace(/&#39;/g, "'");
+  return value.replace(
+    /&(lt|gt|amp|quot|#39);/g,
+    (entity) =>
+      (
+        ({
+          "&lt;": "<",
+          "&gt;": ">",
+          "&amp;": "&",
+          "&quot;": '"',
+          "&#39;": "'",
+        }) as Record<string, string>
+      )[entity] ?? entity,
+  );
 }
 
 export function trimSingleEdgeNewlines(value: string): string {
