@@ -16,40 +16,20 @@ const allTags = [...new Set(uiCollection.flatMap((c) => c.data.tags))].sort();
     "@type": "WebSite",
     name: "txtui",
     url: "https://txtui.dev",
-    description: "Plain text UI patterns for AI agents",
+    description:
+      "Plain text UI patterns to explain UI structure to AI with fewer tokens",
   }}
 >
   <section class="mb-12">
     <h1 class="text-3xl font-bold mb-2">
       Plain text UI patterns for AI agents
     </h1>
-    <p class="text-text-muted text-lg">
+    <p class="text-text-muted text-lg mb-2">
       Copy-paste friendly, terminal-ready UI patterns rendered in plain text.
     </p>
-  </section>
-
-  <section class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-12">
-    <div class="border border-border rounded-lg p-4">
-      <h2 class="font-bold mb-1">Smoother communication</h2>
-      <p class="text-text-muted text-sm">
-        Share the intent of individual UI parts with AI agents clearly — just
-        copy and paste.
-      </p>
-    </div>
-    <div class="border border-border rounded-lg p-4">
-      <h2 class="font-bold mb-1">Fewer iterations</h2>
-      <p class="text-text-muted text-sm">
-        A concrete visual reference helps the AI reach the desired output in
-        fewer rounds.
-      </p>
-    </div>
-    <div class="border border-border rounded-lg p-4">
-      <h2 class="font-bold mb-1">Save tokens</h2>
-      <p class="text-text-muted text-sm">
-        Plain text uses far fewer tokens than image analysis, and fewer
-        iterations means even more savings.
-      </p>
-    </div>
+    <p class="text-text-muted text-lg">
+      Explain UI structure to AI more clearly with fewer tokens.
+    </p>
   </section>
 
   {
