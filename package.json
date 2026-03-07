@@ -10,6 +10,7 @@
     "build": "astro build",
     "build:dev": "PUBLIC_BUILD_ENV=development SENTRY_RELEASE=development@$npm_package_version PUBLIC_SENTRY_RELEASE=development@$npm_package_version astro build",
     "build:prod": "PUBLIC_BUILD_ENV=production SENTRY_RELEASE=production@$npm_package_version PUBLIC_SENTRY_RELEASE=production@$npm_package_version astro build",
+    "fonts:build": "tsx scripts/fonts/ttf-to-woff2.ts",
     "start": "serve dist",
     "preview": "astro preview",
     "deploy:dev": "pnpm build:dev && wrangler deploy --env development",
@@ -55,6 +56,7 @@
     "simple-git-hooks": "2.13.1",
     "tailwindcss": "4.2.1",
     "tsx": "4.21.0",
+    "ttf2woff2": "8.0.1",
     "typescript": "5.9.3",
     "vitest": "4.0.18",
     "wrangler": "4.69.0"
