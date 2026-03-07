@@ -2,7 +2,7 @@
   "name": "txtui",
   "private": true,
   "type": "module",
-  "version": "0.0.3",
+  "version": "1.0.0",
   "scripts": {
     "prepare": "simple-git-hooks",
     "clean": "rm -rf node_modules",
