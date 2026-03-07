@@ -1,0 +1,52 @@
+---
+title: Textarea
+description: Multi-line text input fields for longer content entry.
+tags:
+  - form
+---
+
+import UIEditor from "../../components/UIEditor.astro";
+
+## Basic
+
+<UIEditor>{`
+┌──────────────────────────────┐
+│                              │
+│                              │
+│                            ╱ │
+└──────────────────────────────┘
+`}</UIEditor>
+
+## With Label
+
+<UIEditor>{`
+Comment
+┌──────────────────────────────┐
+│                              │
+│                              │
+│                            ╱ │
+└──────────────────────────────┘
+`}</UIEditor>
+
+## With Placeholder
+
+<UIEditor>{`
+Bio
+┌──────────────────────────────┐
+│ Tell us about yourself...    │
+│                              │
+│                            ╱ │
+└──────────────────────────────┘
+`}</UIEditor>
+
+## With Character Count
+
+<UIEditor>{`
+Message
+┌──────────────────────────────┐
+│ Hello, world!                │
+│                              │
+│                            ╱ │
+└──────────────────────────────┘
+13 / 280
+`}</UIEditor>

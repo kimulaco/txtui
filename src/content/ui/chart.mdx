@@ -1,0 +1,44 @@
+---
+title: Chart
+description: ASCII bar charts and simple data visualizations.
+tags:
+  - data-display
+---
+
+import UIEditor from "../../components/UIEditor.astro";
+
+## Horizontal Bar
+
+<UIEditor>{`
+Sales by Region
+
+Asia     |==============================| 300
+Europe   |====================          | 200
+America  |===============               | 150
+Africa   |========                      |  80
+`}</UIEditor>
+
+## Vertical Bar
+
+<UIEditor>{`
+  50 |
+     |      ##
+  40 |      ##
+     |      ##  ##
+  30 |      ##  ##
+     |  ##  ##  ##
+  20 |  ##  ##  ##  ##
+     |  ##  ##  ##  ##
+  10 |  ##  ##  ##  ##
+     |  ##  ##  ##  ##
+   0 +--+---+---+---+--
+      Q1  Q2  Q3  Q4
+`}</UIEditor>
+
+## Progress
+
+<UIEditor>{`
+Disk     [==============------]  72%
+Memory   [=========-----------]  45%
+CPU      [==================--]  90%
+`}</UIEditor>

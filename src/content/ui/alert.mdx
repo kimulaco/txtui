@@ -1,0 +1,44 @@
+---
+title: Alert
+description: Feedback messages to inform users about status, warnings, or errors.
+tags:
+  - feedback
+---
+
+import UIEditor from "../../components/UIEditor.astro";
+
+## Info
+
+<UIEditor>{`
+┌──────────────────────────────────────┐
+│ [i] Info                             │
+│     Your session will expire in 5m.  │
+└──────────────────────────────────────┘
+`}</UIEditor>
+
+## Success
+
+<UIEditor>{`
+┌──────────────────────────────────────┐
+│ [v] Success                          │
+│     Your changes have been saved.    │
+└──────────────────────────────────────┘
+`}</UIEditor>
+
+## Warning
+
+<UIEditor>{`
+┌──────────────────────────────────────┐
+│ [!] Warning                          │
+│     Storage is almost full (95%).    │
+└──────────────────────────────────────┘
+`}</UIEditor>
+
+## Error
+
+<UIEditor>{`
+┌──────────────────────────────────────┐
+│ [x] Error                            │
+│     Failed to connect to the server. │
+└──────────────────────────────────────┘
+`}</UIEditor>

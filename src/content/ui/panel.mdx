@@ -1,0 +1,48 @@
+---
+title: Panel
+description: Bordered sections for grouping related content with optional titles.
+tags:
+  - layout
+---
+
+import UIEditor from "../../components/UIEditor.astro";
+
+## Basic
+
+<UIEditor>{`
+┌──────────────────────────────┐
+│                              │
+│ Panel content goes here.     │
+│ Any text or information.     │
+│                              │
+└──────────────────────────────┘
+`}</UIEditor>
+
+## With Title
+
+<UIEditor>{`
+┌─ Settings ───────────────────┐
+│                              │
+│ Panel content goes here.     │
+│ Any text or information.     │
+│                              │
+└──────────────────────────────┘
+`}</UIEditor>
+
+## Nested
+
+<UIEditor>{`
+┌─ Account ────────────────────┐
+│                              │
+│  ┌─ Profile ──────────────┐  │
+│  │ Name: Alice            │  │
+│  │ Email: alice@email.com │  │
+│  └────────────────────────┘  │
+│                              │
+│  ┌─ Security ─────────────┐  │
+│  │ 2FA: Enabled           │  │
+│  │ Last login: Jan 1      │  │
+│  └────────────────────────┘  │
+│                              │
+└──────────────────────────────┘
+`}</UIEditor>

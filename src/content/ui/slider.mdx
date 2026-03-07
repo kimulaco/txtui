@@ -1,0 +1,39 @@
+---
+title: Slider
+description: Range sliders for selecting values within a defined range.
+tags:
+  - form
+---
+
+import UIEditor from "../../components/UIEditor.astro";
+
+## Basic
+
+<UIEditor>{`
+0 ────────●──────── 100
+               72
+`}</UIEditor>
+
+## With Label
+
+<UIEditor>{`
+Volume
+0 ──●──────────────── 100
+      18
+`}</UIEditor>
+
+## Range
+
+<UIEditor>{`
+Price Range
+$0 ───●────────●─── $1000
+     $200     $800
+`}</UIEditor>
+
+## Steps
+
+<UIEditor>{`
+Quality
+Low ──●───────────── High
+  [ Low ] [ Med ] [ High ]
+`}</UIEditor>

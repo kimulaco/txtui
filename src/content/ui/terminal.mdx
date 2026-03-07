@@ -1,0 +1,44 @@
+---
+title: Terminal
+description: Terminal and console displays for showing command-line interactions.
+tags:
+  - data-display
+---
+
+import UIEditor from "../../components/UIEditor.astro";
+
+## Basic
+
+<UIEditor>{`
+┌──────────────────────────────────┐
+│ $ npm install                    │
+│ added 120 packages in 3s         │
+│ $                                │
+└──────────────────────────────────┘
+`}</UIEditor>
+
+## With Title Bar
+
+<UIEditor>{`
+┌─ Terminal ───────────────────────┐
+│ $ git status                     │
+│ On branch main                   │
+│ nothing to commit                │
+│ $                                │
+└──────────────────────────────────┘
+`}</UIEditor>
+
+## With Output
+
+<UIEditor>{`
+┌──────────────────────────────────┐
+│ $ npm test                       │
+│                                  │
+│ PASS  src/app.test.ts            │
+│ PASS  src/utils.test.ts          │
+│                                  │
+│ Tests:  2 passed, 2 total        │
+│ Time:   1.24s                    │
+│ $                                │
+└──────────────────────────────────┘
+`}</UIEditor>

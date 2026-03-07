@@ -1,0 +1,32 @@
+---
+title: Divider
+description: Horizontal and vertical dividers for separating content sections.
+tags:
+  - layout
+---
+
+import UIEditor from "../../components/UIEditor.astro";
+
+## Basic
+
+<UIEditor>{`
+Content above
+────────────────────────────────
+Content below
+`}</UIEditor>
+
+## With Label
+
+<UIEditor>{`
+Content above
+──────────── or ────────────
+Content below
+`}</UIEditor>
+
+## Dashed
+
+<UIEditor>{`
+Content above
+- - - - - - - - - - - - - - - -
+Content below
+`}</UIEditor>
