@@ -20,10 +20,9 @@ pnpm dev
 | `pnpm dev`         | Start dev server                      |
 | `pnpm build`       | Build for production                  |
 | `pnpm fmt`         | Run format                            |
-| `pnpm lint`        | Run lint                              |
-| `pnpm typecheck`   | Run lint                              |
+| `pnpm typecheck`   | Run type check                        |
 | `pnpm test`        | Run test                              |
-| `pnpm allcheck`    | Run format, lint, typecheck, and test |
+| `pnpm check:all`   | Run format, lint, typecheck, and test |
 | `pnpm deploy:dev`  | Deploy to dev environment             |
 | `pnpm deploy:prod` | Deploy to production                  |
 

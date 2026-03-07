@@ -1,5 +1,5 @@
 {
-  "entry": ["src/pages/**/*.astro", "scripts/ci/check-package-version-bump.ts"],
+  "entry": ["src/pages/**/*.astro"],
   "project": ["src/**/*.{ts,astro}", "scripts/**/*.ts"],
   "ignoreDependencies": [
     "@secretlint/secretlint-rule-preset-recommend",

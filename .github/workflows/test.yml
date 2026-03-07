@@ -39,7 +39,9 @@ jobs:
         if: github.event_name == 'pull_request' && github.base_ref == 'main'
         run: pnpm exec tsx scripts/ci/check-package-version-bump.ts "${{ github.base_ref }}"
       - run: pnpm astro sync
-      - run: pnpm run lint:ci
+      - run: pnpm run lint:secret
       - run: pnpm run fmt
+      - run: pnpm run lint:knip
+      - run: pnpm run lint:eslint
       - run: pnpm run typecheck
       - run: pnpm run test

@@ -2,8 +2,23 @@
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnSave": true,
   "editor.formatOnSaveMode": "file",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
 
   "files.associations": {
     "*.css": "tailwindcss"
+  },
+
+  "yaml.format.enable": true,
+
+  "[astro]": {
+    "editor.defaultFormatter": "astro-build.astro-vscode"
+  },
+  "[yaml]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
+  "[mdx]": {
+    "editor.defaultFormatter": "unifiedjs.vscode-mdx"
   }
 }
