@@ -23,6 +23,14 @@ describe("Header", () => {
     expect(result).toContain('href="/about/"');
     expect(result).toContain("About");
   });
+
+  it("contains a GitHub repository link with external link attributes", async () => {
+    const container = await AstroContainer.create();
+    const result = await container.renderToString(Header);
+    expect(result).toContain('href="https://github.com/kimulaco/txtui"');
+    expect(result).toContain('aria-label="View txtui on GitHub"');
+    expect(result).toContain("<svg");
+  });
 });
 
 describe("Footer", () => {
