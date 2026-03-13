@@ -1,3 +1,8 @@
+---
+import GitHubLogo from "../assets/icons/github-logo.svg?raw";
+import { REPOS_URL } from "../config";
+---
+
 <header class="border-b border-border">
   <div class="max-w-5xl mx-auto px-4 py-4 flex items-center justify-between">
     <a
@@ -6,12 +11,19 @@
     >
       txtui
     </a>
-    <nav>
+    <nav class="flex items-center gap-4">
       <a
         href="/about/"
         class="text-text-muted hover:text-accent transition-colors text-sm"
       >
         About
+      </a>
+      <a
+        href={REPOS_URL}
+        class="text-text hover:text-text-muted transition-colors w-6 h-6"
+        aria-label="View txtui on GitHub"
+      >
+        <fragment set:html={GitHubLogo} />
       </a>
     </nav>
   </div>

@@ -1,0 +1,46 @@
+{
+  "name": "txtui Container",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "containerEnv": {
+    "LANG": "ja_JP.UTF-8",
+    "LC_ALL": "ja_JP.UTF-8",
+    "LANGUAGE": "ja_JP:ja"
+  },
+  "remoteEnv": {
+    "LANG": "ja_JP.UTF-8",
+    "LC_ALL": "ja_JP.UTF-8",
+    "LANGUAGE": "ja_JP:ja"
+  },
+  "features": {
+    "ghcr.io/devcontainers/features/github-cli:1": {}
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "astro-build.astro-vscode",
+        "bradlc.vscode-tailwindcss",
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
+        "redhat.vscode-yaml",
+        "unifiedjs.vscode-mdx"
+      ]
+    }
+  },
+  "forwardPorts": [4321],
+  "portsAttributes": {
+    "4321": {
+      "label": "Astro dev server",
+      "onAutoForward": "notify"
+    }
+  },
+  "otherPortsAttributes": {
+    "onAutoForward": "ignore"
+  },
+  "mounts": [
+    "source=txtui-node-modules,target=${containerWorkspaceFolder}/node_modules,type=volume",
+    "source=txtui-pnpm-store,target=${containerWorkspaceFolder}/.pnpm-store,type=volume"
+  ],
+  "postCreateCommand": "bash .devcontainer/post-create.sh"
+}

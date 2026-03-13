@@ -2,8 +2,5 @@
 .pnpm-store
 pnpm-lock.yaml
 
-# Prettier の Astro パーサーが arguments を解析できない
 src/components/GoogleAnalytics.astro
-
-# UI ASCII アートの連続スペースを保持するため
-src/content/ui/*.mdx
+*.mdx
