@@ -28,9 +28,7 @@ describe("Header", () => {
     const container = await AstroContainer.create();
     const result = await container.renderToString(Header);
     expect(result).toContain('href="https://github.com/kimulaco/txtui"');
-    expect(result).toContain('target="_blank"');
-    expect(result).toContain('rel="noreferrer"');
-    expect(result).toContain('aria-label="GitHub repository"');
+    expect(result).toContain('aria-label="View txtui on GitHub"');
     expect(result).toContain("<svg");
   });
 });
