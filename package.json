@@ -43,9 +43,9 @@
   "devDependencies": {
     "@secretlint/secretlint-rule-preset-recommend": "11.3.1",
     "@tailwindcss/vite": "4.2.1",
-    "@typescript-eslint/parser": "8.56.1",
+    "@typescript-eslint/parser": "8.57.0",
     "@vitest/coverage-v8": "4.1.0",
-    "eslint": "10.0.2",
+    "eslint": "10.0.3",
     "eslint-plugin-astro": "1.6.0",
     "knip": "5.86.0",
     "prettier": "3.8.1",
