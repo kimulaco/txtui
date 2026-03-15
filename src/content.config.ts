@@ -23,6 +23,7 @@ const uiCollection = defineCollection({
   schema: z.object({
     title: z.string(),
     description: z.string(),
+    previewBlockId: z.string(),
     tags: z.array(z.enum(UI_TAGS)),
   }),
 });
