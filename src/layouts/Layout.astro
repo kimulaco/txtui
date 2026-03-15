@@ -95,6 +95,7 @@ const gaId = import.meta.env.PUBLIC_GA_MEASUREMENT_ID;
         window.gtag("event", eventName, {
           ui_id: target.dataset.gaClickEventUiId,
           ui_block_id: target.dataset.gaClickEventUiBlockId,
+          filter_tag: target.dataset.gaClickEventTag,
         });
       });
     </script>

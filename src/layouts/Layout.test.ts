@@ -22,5 +22,6 @@ describe("Layout", () => {
     expect(result).toContain(
       "ui_block_id: target.dataset.gaClickEventUiBlockId",
     );
+    expect(result).toContain("filter_tag: target.dataset.gaClickEventTag");
   });
 });
