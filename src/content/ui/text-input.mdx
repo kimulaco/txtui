@@ -1,6 +1,7 @@
 ---
 title: Text Input
 description: Single-line text input fields for forms and data entry.
+previewBlockId: text-input-with-placeholder
 tags:
   - form
 ---
@@ -9,7 +10,7 @@ import UIEditor from "../../components/UIEditor.astro";
 
 ## Basic
 
-<UIEditor>{`
+<UIEditor uiId="text-input" uiBlockId="text-input-basic">{`
 ┌──────────────────────────┐
 │                          │
 └──────────────────────────┘
@@ -17,7 +18,7 @@ import UIEditor from "../../components/UIEditor.astro";
 
 ## With Label
 
-<UIEditor>{`
+<UIEditor uiId="text-input" uiBlockId="text-input-with-label">{`
 Username
 ┌──────────────────────────┐
 │                          │
@@ -26,7 +27,7 @@ Username
 
 ## With Placeholder
 
-<UIEditor>{`
+<UIEditor uiId="text-input" uiBlockId="text-input-with-placeholder">{`
 Email
 ┌──────────────────────────┐
 │ you@example.com          │
@@ -35,7 +36,7 @@ Email
 
 ## With Validation
 
-<UIEditor>{`
+<UIEditor uiId="text-input" uiBlockId="text-input-with-validation">{`
 Password
 ┌──────────────────────────┐
 │ ****                     │

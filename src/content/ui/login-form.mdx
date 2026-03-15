@@ -1,6 +1,7 @@
 ---
 title: Login Form
 description: Composite login forms with fields, actions, and optional extras.
+previewBlockId: login-form-basic
 tags:
   - form
 ---
@@ -9,7 +10,7 @@ import UIEditor from "../../components/UIEditor.astro";
 
 ## Basic
 
-<UIEditor>{`
+<UIEditor uiId="login-form" uiBlockId="login-form-basic">{`
 ┌────────────────────────────────┐
 │            Login               │
 │                                │
@@ -32,7 +33,7 @@ import UIEditor from "../../components/UIEditor.astro";
 
 ## With Remember Me
 
-<UIEditor>{`
+<UIEditor uiId="login-form" uiBlockId="login-form-with-remember-me">{`
 ┌────────────────────────────────┐
 │            Login               │
 │                                │
@@ -59,7 +60,7 @@ import UIEditor from "../../components/UIEditor.astro";
 
 ## With Social Login
 
-<UIEditor>{`
+<UIEditor uiId="login-form" uiBlockId="login-form-with-social-login">{`
 ┌────────────────────────────────┐
 │            Login               │
 │                                │

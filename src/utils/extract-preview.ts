@@ -1,35 +1,28 @@
-export function extractPreview(body: string): string {
-  const candidates: Array<{ index: number; content: string }> = [];
+function escapeRegExp(value: string): string {
+  return value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+}
 
-  const fenceRegex = /```[\s\S]*?\n([\s\S]*?)```/g;
-  for (const match of body.matchAll(fenceRegex)) {
-    candidates.push({
-      index: match.index ?? Number.MAX_SAFE_INTEGER,
-      content: match[1],
-    });
-  }
-
-  const uiEditorChildRegex = /<UIEditor>\s*\{`([\s\S]*?)`\}\s*<\/UIEditor>/g;
-  for (const match of body.matchAll(uiEditorChildRegex)) {
-    candidates.push({
-      index: match.index ?? Number.MAX_SAFE_INTEGER,
-      content: match[1],
-    });
-  }
-
-  const uiEditorContentRegex =
-    /<UIEditor[^>]*\scontent=\{(?:String\.raw)?`([\s\S]*?)`\}[^>]*\/>/g;
-  for (const match of body.matchAll(uiEditorContentRegex)) {
-    candidates.push({
-      index: match.index ?? Number.MAX_SAFE_INTEGER,
-      content: match[1],
-    });
-  }
-
-  if (candidates.length === 0) {
+export function extractPreview(body: string, previewBlockId: string): string {
+  if (!body || !previewBlockId) {
     return "";
   }
 
-  candidates.sort((a, b) => a.index - b.index);
-  return candidates[0].content.trim();
+  const blockIdPattern = escapeRegExp(previewBlockId);
+  const uiEditorChildRegex = new RegExp(
+    `<UIEditor[^>]*\\suiBlockId=["']${blockIdPattern}["'][^>]*>\\s*\\{\`([\\s\\S]*?)\`\\}\\s*<\\/UIEditor>`,
+  );
+  const childMatch = body.match(uiEditorChildRegex);
+  if (childMatch) {
+    return childMatch[1].trim();
+  }
+
+  const uiEditorContentRegex = new RegExp(
+    `<UIEditor[^>]*\\suiBlockId=["']${blockIdPattern}["'][^>]*\\scontent=\\{(?:String\\.raw)?\`([\\s\\S]*?)\`\\}[^>]*\\/>`,
+  );
+  const contentMatch = body.match(uiEditorContentRegex);
+  if (contentMatch) {
+    return contentMatch[1].trim();
+  }
+
+  return "";
 }

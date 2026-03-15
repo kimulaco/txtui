@@ -1,6 +1,7 @@
 ---
 title: Switch
 description: Toggle switches for turning options on or off.
+previewBlockId: switch-off
 tags:
   - form
 ---
@@ -9,19 +10,19 @@ import UIEditor from "../../components/UIEditor.astro";
 
 ## Off
 
-<UIEditor>{`
+<UIEditor uiId="switch" uiBlockId="switch-off">{`
 Dark Mode   [○───]
 `}</UIEditor>
 
 ## On
 
-<UIEditor>{`
+<UIEditor uiId="switch" uiBlockId="switch-on">{`
 Dark Mode   [───●]
 `}</UIEditor>
 
 ## Group
 
-<UIEditor>{`
+<UIEditor uiId="switch" uiBlockId="switch-group">{`
 Dark Mode       [───●]
 Notifications   [○───]
 Auto-save       [───●]

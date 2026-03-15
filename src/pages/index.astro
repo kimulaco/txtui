@@ -50,7 +50,7 @@ const allTags = [...new Set(uiCollection.flatMap((c) => c.data.tags))].sort();
           title={ui.data.title}
           description={ui.data.description}
           slug={ui.id}
-          preview={extractPreview(ui.body ?? "")}
+          preview={extractPreview(ui.body ?? "", ui.data.previewBlockId)}
           tags={ui.data.tags}
         />
       ))

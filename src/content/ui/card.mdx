@@ -1,6 +1,7 @@
 ---
 title: Card
 description: Container component for grouping related content and actions.
+previewBlockId: card-basic
 tags:
   - data-display
 ---
@@ -9,7 +10,7 @@ import UIEditor from "../../components/UIEditor.astro";
 
 ## Basic
 
-<UIEditor>{`
+<UIEditor uiId="card" uiBlockId="card-basic">{`
 ┌──────────────────────────────┐
 │                              │
 │ Card Title                   │
@@ -22,7 +23,7 @@ import UIEditor from "../../components/UIEditor.astro";
 
 ## With Image
 
-<UIEditor>{`
+<UIEditor uiId="card" uiBlockId="card-with-image">{`
 ┌──────────────────────────────┐
 │ ┌──────────────────────────┐ │
 │ │                          │ │
@@ -42,7 +43,7 @@ import UIEditor from "../../components/UIEditor.astro";
 
 ## Horizontal
 
-<UIEditor>{`
+<UIEditor uiId="card" uiBlockId="card-horizontal">{`
 ┌──────────────┬───────────────────────┐
 │              │                       │
 │  ┌────────┐  │ Card Title            │

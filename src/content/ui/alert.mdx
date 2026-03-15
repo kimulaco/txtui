@@ -1,6 +1,7 @@
 ---
 title: Alert
 description: Feedback messages to inform users about status, warnings, or errors.
+previewBlockId: alert-info
 tags:
   - feedback
 ---
@@ -9,7 +10,7 @@ import UIEditor from "../../components/UIEditor.astro";
 
 ## Info
 
-<UIEditor>{`
+<UIEditor uiId="alert" uiBlockId="alert-info">{`
 ┌──────────────────────────────────────┐
 │ [i] Info                             │
 │     Your session will expire in 5m.  │
@@ -18,7 +19,7 @@ import UIEditor from "../../components/UIEditor.astro";
 
 ## Success
 
-<UIEditor>{`
+<UIEditor uiId="alert" uiBlockId="alert-success">{`
 ┌──────────────────────────────────────┐
 │ [v] Success                          │
 │     Your changes have been saved.    │
@@ -27,7 +28,7 @@ import UIEditor from "../../components/UIEditor.astro";
 
 ## Warning
 
-<UIEditor>{`
+<UIEditor uiId="alert" uiBlockId="alert-warning">{`
 ┌──────────────────────────────────────┐
 │ [!] Warning                          │
 │     Storage is almost full (95%).    │
@@ -36,7 +37,7 @@ import UIEditor from "../../components/UIEditor.astro";
 
 ## Error
 
-<UIEditor>{`
+<UIEditor uiId="alert" uiBlockId="alert-error">{`
 ┌──────────────────────────────────────┐
 │ [x] Error                            │
 │     Failed to connect to the server. │

@@ -5,11 +5,13 @@ import {
 } from "../features/live-editor/content";
 
 interface Props {
+  uiId: string;
+  uiBlockId: string;
   title?: string;
   content?: string;
 }
 
-const { title = "", content } = Astro.props as Props;
+const { uiId, uiBlockId, title = "", content } = Astro.props as Props;
 const slotHtml =
   content === undefined ? await Astro.slots.render("default") : "";
 const resolvedContent =
@@ -18,20 +20,42 @@ const resolvedContent =
     : trimSingleEdgeNewlines(content.replace(/\r\n?/g, "\n"));
 ---
 
-<div class="code-editor-wrapper">
+<div class="code-editor-wrapper" data-ui-editor>
   <div class="code-editor-header">
     <span class="code-editor-title">{title}</span>
     <div class="code-tools">
-      <button type="button" class="code-tool-btn" data-code-tool="copy"
-        >Copy</button
+      <button
+        type="button"
+        class="code-tool-btn"
+        data-code-tool="copy"
+        data-ga-click-event
+        data-ga-click-event-name="ui_copy_click"
+        data-ga-click-event-ui-id={uiId}
+        data-ga-click-event-ui-block-id={uiBlockId}>Copy</button
       >
-      <button type="button" class="code-tool-btn" data-code-tool="reset"
-        >Reset</button
+      <button
+        type="button"
+        class="code-tool-btn"
+        data-code-tool="reset"
+        data-ga-click-event
+        data-ga-click-event-name="ui_reset_click"
+        data-ga-click-event-ui-id={uiId}
+        data-ga-click-event-ui-block-id={uiBlockId}>Reset</button
       >
-      <button type="button" class="code-tool-btn" data-code-tool="pretty"
-        >Pretty</button
+      <button
+        type="button"
+        class="code-tool-btn"
+        data-code-tool="pretty"
+        data-ga-click-event
+        data-ga-click-event-name="ui_pretty_click"
+        data-ga-click-event-ui-id={uiId}
+        data-ga-click-event-ui-block-id={uiBlockId}>Pretty</button
       >
     </div>
   </div>
   <pre class="live-editor-pre"><code>{resolvedContent}</code></pre>
 </div>
+
+<script>
+  import "./UIEditor.client";
+</script>

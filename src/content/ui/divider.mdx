@@ -1,6 +1,7 @@
 ---
 title: Divider
 description: Horizontal and vertical dividers for separating content sections.
+previewBlockId: divider-basic
 tags:
   - layout
 ---
@@ -9,7 +10,7 @@ import UIEditor from "../../components/UIEditor.astro";
 
 ## Basic
 
-<UIEditor>{`
+<UIEditor uiId="divider" uiBlockId="divider-basic">{`
 Content above
 ────────────────────────────────
 Content below
@@ -17,7 +18,7 @@ Content below
 
 ## With Label
 
-<UIEditor>{`
+<UIEditor uiId="divider" uiBlockId="divider-with-label">{`
 Content above
 ──────────── or ────────────
 Content below
@@ -25,7 +26,7 @@ Content below
 
 ## Dashed
 
-<UIEditor>{`
+<UIEditor uiId="divider" uiBlockId="divider-dashed">{`
 Content above
 - - - - - - - - - - - - - - - -
 Content below

@@ -1,6 +1,7 @@
 ---
 title: Accordion
 description: Collapsible sections for organizing content into expandable panels.
+previewBlockId: accordion-collapsed
 tags:
   - layout
 ---
@@ -9,7 +10,7 @@ import UIEditor from "../../components/UIEditor.astro";
 
 ## Collapsed
 
-<UIEditor>{`
+<UIEditor uiId="accordion" uiBlockId="accordion-collapsed">{`
 ┌──────────────────────────────┐
 │ > Section 1                  │
 ├──────────────────────────────┤
@@ -21,7 +22,7 @@ import UIEditor from "../../components/UIEditor.astro";
 
 ## Expanded
 
-<UIEditor>{`
+<UIEditor uiId="accordion" uiBlockId="accordion-expanded">{`
 ┌──────────────────────────────┐
 │ v Section 1                  │
 │                              │
@@ -38,7 +39,7 @@ import UIEditor from "../../components/UIEditor.astro";
 
 ## Multiple Open
 
-<UIEditor>{`
+<UIEditor uiId="accordion" uiBlockId="accordion-multiple-open">{`
 ┌──────────────────────────────┐
 │ v Section 1                  │
 │                              │

@@ -1,6 +1,7 @@
 ---
 title: Checkbox
 description: Checkboxes for selecting one or multiple options from a set.
+previewBlockId: checkbox-group
 tags:
   - form
 ---
@@ -9,19 +10,19 @@ import UIEditor from "../../components/UIEditor.astro";
 
 ## Basic
 
-<UIEditor>{`
+<UIEditor uiId="checkbox" uiBlockId="checkbox-basic">{`
 [ ] Option A
 `}</UIEditor>
 
 ## Checked
 
-<UIEditor>{`
+<UIEditor uiId="checkbox" uiBlockId="checkbox-checked">{`
 [x] Option A
 `}</UIEditor>
 
 ## Group
 
-<UIEditor>{`
+<UIEditor uiId="checkbox" uiBlockId="checkbox-group">{`
 [x] Option A
 [ ] Option B
 [x] Option C
@@ -30,7 +31,7 @@ import UIEditor from "../../components/UIEditor.astro";
 
 ## With Label
 
-<UIEditor>{`
+<UIEditor uiId="checkbox" uiBlockId="checkbox-with-label">{`
 Notifications
 [x] Email
 [x] Push

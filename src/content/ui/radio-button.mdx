@@ -1,6 +1,7 @@
 ---
 title: Radio Button
 description: Radio buttons for selecting a single option from a group.
+previewBlockId: radio-button-basic
 tags:
   - form
 ---
@@ -9,7 +10,7 @@ import UIEditor from "../../components/UIEditor.astro";
 
 ## Basic
 
-<UIEditor>{`
+<UIEditor uiId="radio-button" uiBlockId="radio-button-basic">{`
 ( ) Option A
 (o) Option B
 ( ) Option C
@@ -17,7 +18,7 @@ import UIEditor from "../../components/UIEditor.astro";
 
 ## With Label
 
-<UIEditor>{`
+<UIEditor uiId="radio-button" uiBlockId="radio-button-with-label">{`
 Plan
 ( ) Free
 (o) Pro
@@ -26,6 +27,6 @@ Plan
 
 ## Horizontal
 
-<UIEditor>{`
+<UIEditor uiId="radio-button" uiBlockId="radio-button-horizontal">{`
 Size:  ( ) S  (o) M  ( ) L  ( ) XL
 `}</UIEditor>

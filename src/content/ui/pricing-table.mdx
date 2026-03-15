@@ -1,6 +1,7 @@
 ---
 title: Pricing Table
 description: Comparison tables for displaying pricing plans and features.
+previewBlockId: pricing-table-basic
 tags:
   - data-display
   - table
@@ -10,7 +11,7 @@ import UIEditor from "../../components/UIEditor.astro";
 
 ## Basic
 
-<UIEditor>{`
+<UIEditor uiId="pricing-table" uiBlockId="pricing-table-basic">{`
 ┌──────────────┬──────────────┬──────────────┐
 │ Free         │ Pro          │ Enterprise   │
 │              │              │              │
@@ -26,7 +27,7 @@ import UIEditor from "../../components/UIEditor.astro";
 
 ## With Highlight
 
-<UIEditor>{`
+<UIEditor uiId="pricing-table" uiBlockId="pricing-table-with-highlight">{`
 ┌──────────────┬──────────────┬──────────────┐
 │ Free         │ Pro *        │ Enterprise   │
 │              │              │              │

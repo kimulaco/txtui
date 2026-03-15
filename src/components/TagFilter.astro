@@ -13,6 +13,9 @@ const { tags } = Astro.props;
         type="button"
         class="px-3 py-1 text-sm rounded bg-surface text-text-muted border border-border cursor-pointer transition-colors"
         data-tag={tag}
+        data-ga-click-event
+        data-ga-click-event-name="ui_filter_tag_click"
+        data-ga-click-event-tag={tag}
       >
         {tag}
       </button>

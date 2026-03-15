@@ -1,6 +1,7 @@
 ---
 title: Code Block
 description: Styled code display blocks with optional language labels and line numbers.
+previewBlockId: code-block-basic
 tags:
   - data-display
 ---
@@ -9,7 +10,7 @@ import UIEditor from "../../components/UIEditor.astro";
 
 ## Basic
 
-<UIEditor>{`
+<UIEditor uiId="code-block" uiBlockId="code-block-basic">{`
 ┌──────────────────────────────┐
 │ const x = 42;                │
 │ console.log(x);              │
@@ -18,7 +19,7 @@ import UIEditor from "../../components/UIEditor.astro";
 
 ## With Language
 
-<UIEditor>{`
+<UIEditor uiId="code-block" uiBlockId="code-block-with-language">{`
 ┌─ javascript ─────────────────┐
 │ const x = 42;                │
 │ console.log(x);              │
@@ -27,7 +28,7 @@ import UIEditor from "../../components/UIEditor.astro";
 
 ## With Line Numbers
 
-<UIEditor>{`
+<UIEditor uiId="code-block" uiBlockId="code-block-with-line-numbers">{`
 ┌──────────────────────────────┐
 │ 1 │ const x = 42;            │
 │ 2 │ const y = 10;            │

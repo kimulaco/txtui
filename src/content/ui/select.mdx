@@ -1,6 +1,7 @@
 ---
 title: Select
 description: Dropdown select menus for choosing from a list of options.
+previewBlockId: select-basic
 tags:
   - form
 ---
@@ -9,7 +10,7 @@ import UIEditor from "../../components/UIEditor.astro";
 
 ## Basic
 
-<UIEditor>{`
+<UIEditor uiId="select" uiBlockId="select-basic">{`
 ┌──────────────────────────  v ┐
 │ Select an option             │
 └──────────────────────────────┘
@@ -17,7 +18,7 @@ import UIEditor from "../../components/UIEditor.astro";
 
 ## With Label
 
-<UIEditor>{`
+<UIEditor uiId="select" uiBlockId="select-with-label">{`
 Country
 ┌──────────────────────────  v ┐
 │ United States                │
@@ -26,7 +27,7 @@ Country
 
 ## Open
 
-<UIEditor>{`
+<UIEditor uiId="select" uiBlockId="select-open">{`
 Country
 ┌──────────────────────────  v ┐
 │ United States                │

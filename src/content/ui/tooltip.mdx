@@ -1,6 +1,7 @@
 ---
 title: Tooltip
 description: Small popover hints that appear on hover or focus.
+previewBlockId: tooltip-top
 tags:
   - data-display
 ---
@@ -9,7 +10,7 @@ import UIEditor from "../../components/UIEditor.astro";
 
 ## Top
 
-<UIEditor content={String.raw`
+<UIEditor uiId="tooltip" uiBlockId="tooltip-top" content={String.raw`
 +-------------------+
 | Helpful tooltip   |
 +--------+----------+
@@ -19,7 +20,7 @@ import UIEditor from "../../components/UIEditor.astro";
 
 ## Bottom
 
-<UIEditor content={String.raw`
+<UIEditor uiId="tooltip" uiBlockId="tooltip-bottom" content={String.raw`
          [Button]
              ^
     +--------+----------+
@@ -29,7 +30,7 @@ import UIEditor from "../../components/UIEditor.astro";
 
 ## Right
 
-<UIEditor content={String.raw`
+<UIEditor uiId="tooltip" uiBlockId="tooltip-right" content={String.raw`
                +-------------------+
 [Button]  >  | Helpful tooltip   |
                +-------------------+

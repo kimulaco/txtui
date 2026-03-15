@@ -1,6 +1,7 @@
 ---
 title: Form Validation
 description: Form fields with validation states showing errors and success.
+previewBlockId: form-validation-error
 tags:
   - form
 ---
@@ -9,7 +10,7 @@ import UIEditor from "../../components/UIEditor.astro";
 
 ## Error
 
-<UIEditor>{`
+<UIEditor uiId="form-validation" uiBlockId="form-validation-error">{`
 Email
 ┌──────────────────────────┐
 │ invalid-email            │
@@ -25,7 +26,7 @@ Password
 
 ## Success
 
-<UIEditor>{`
+<UIEditor uiId="form-validation" uiBlockId="form-validation-success">{`
 Email
 ┌──────────────────────────┐
 │ alice@example.com        │
@@ -41,7 +42,7 @@ v Strong password
 
 ## Mixed
 
-<UIEditor>{`
+<UIEditor uiId="form-validation" uiBlockId="form-validation-mixed">{`
 Username
 ┌──────────────────────────┐
 │ alice                    │

@@ -4,6 +4,15 @@ minimumReleaseAge: 1440
 
 trustPolicy: no-downgrade
 
+trustPolicyExclude:
+  # Renovate artifact updates currently fail on this transitive package with
+  # ERR_PNPM_TRUST_DOWNGRADE. Keep the exception narrow and remove it once the
+  # dependency graph no longer resolves to this version.
+  - semver@6.3.1
+  # This version has provenance attestation, but pnpm still treats it as a
+  # trust downgrade relative to earlier trusted-publisher releases.
+  - vite@6.4.1
+
 auditLevel: high
 
 allowBuilds:

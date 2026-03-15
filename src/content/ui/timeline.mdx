@@ -1,6 +1,7 @@
 ---
 title: Timeline
 description: Chronological display of events and activities.
+previewBlockId: timeline-basic
 tags:
   - data-display
   - list
@@ -10,7 +11,7 @@ import UIEditor from "../../components/UIEditor.astro";
 
 ## Basic
 
-<UIEditor>{`
+<UIEditor uiId="timeline" uiBlockId="timeline-basic">{`
 o  Project started
 |  Jan 1, 2025
 |
@@ -26,7 +27,7 @@ o  Development began
 
 ## With Details
 
-<UIEditor>{`
+<UIEditor uiId="timeline" uiBlockId="timeline-with-details">{`
 o  Account created
 |  Jan 1, 2025
 |  User signed up via email.

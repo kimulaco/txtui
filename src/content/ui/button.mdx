@@ -1,6 +1,7 @@
 ---
 title: Button
 description: Interactive button elements for triggering actions and navigation.
+previewBlockId: button-basic
 tags:
   - button
 ---
@@ -9,7 +10,7 @@ import UIEditor from "../../components/UIEditor.astro";
 
 ## Basic
 
-<UIEditor>{`
+<UIEditor uiId="button" uiBlockId="button-basic">{`
 ┌──────────┐  ┌──────────┐  ┌──────────┐
 │  Submit  │  │  Cancel  │  │ Disabled │
 └──────────┘  └──────────┘  └──────────┘
@@ -17,7 +18,7 @@ import UIEditor from "../../components/UIEditor.astro";
 
 ## Group
 
-<UIEditor>{`
+<UIEditor uiId="button" uiBlockId="button-group">{`
 ┌──────────┬──────────┬──────────┐
 │   Left   │  Center  │  Right   │
 └──────────┴──────────┴──────────┘
@@ -25,7 +26,7 @@ import UIEditor from "../../components/UIEditor.astro";
 
 ## With Icon - Add
 
-<UIEditor>{`
+<UIEditor uiId="button" uiBlockId="button-with-icon-add">{`
 ┌────────────┐
 │ + Add Item │
 └────────────┘
@@ -33,7 +34,7 @@ import UIEditor from "../../components/UIEditor.astro";
 
 ## With Icon - Edit
 
-<UIEditor>{`
+<UIEditor uiId="button" uiBlockId="button-with-icon-edit">{`
 ┌────────────┐
 │ > Edit     │
 └────────────┘
@@ -41,7 +42,7 @@ import UIEditor from "../../components/UIEditor.astro";
 
 ## With Icon - Delete
 
-<UIEditor>{`
+<UIEditor uiId="button" uiBlockId="button-with-icon-delete">{`
 ┌────────────┐
 │ x Delete   │
 └────────────┘

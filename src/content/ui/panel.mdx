@@ -1,6 +1,7 @@
 ---
 title: Panel
 description: Bordered sections for grouping related content with optional titles.
+previewBlockId: panel-basic
 tags:
   - layout
 ---
@@ -9,7 +10,7 @@ import UIEditor from "../../components/UIEditor.astro";
 
 ## Basic
 
-<UIEditor>{`
+<UIEditor uiId="panel" uiBlockId="panel-basic">{`
 ┌──────────────────────────────┐
 │                              │
 │ Panel content goes here.     │
@@ -20,7 +21,7 @@ import UIEditor from "../../components/UIEditor.astro";
 
 ## With Title
 
-<UIEditor>{`
+<UIEditor uiId="panel" uiBlockId="panel-with-title">{`
 ┌─ Settings ───────────────────┐
 │                              │
 │ Panel content goes here.     │
@@ -31,7 +32,7 @@ import UIEditor from "../../components/UIEditor.astro";
 
 ## Nested
 
-<UIEditor>{`
+<UIEditor uiId="panel" uiBlockId="panel-nested">{`
 ┌─ Account ────────────────────┐
 │                              │
 │  ┌─ Profile ──────────────┐  │

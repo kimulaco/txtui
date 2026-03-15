@@ -1,6 +1,7 @@
 ---
 title: Navbar
 description: Top navigation bar with links, branding, and optional user controls.
+previewBlockId: navbar-with-user-menu
 tags:
   - navigation
 ---
@@ -9,7 +10,7 @@ import UIEditor from "../../components/UIEditor.astro";
 
 ## Basic
 
-<UIEditor>{`
+<UIEditor uiId="navbar" uiBlockId="navbar-basic">{`
 ┌──────────────────────────────────────────┐
 │ MySite    Home  About  Blog    Contact   │
 └──────────────────────────────────────────┘
@@ -17,7 +18,7 @@ import UIEditor from "../../components/UIEditor.astro";
 
 ## With User Menu
 
-<UIEditor>{`
+<UIEditor uiId="navbar" uiBlockId="navbar-with-user-menu">{`
 ┌──────────────────────────────────────────┐
 │ MySite    Home  About  Blog    [Alice v] │
 └──────────────────────────────────────────┘

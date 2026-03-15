@@ -1,6 +1,7 @@
 ---
 title: Textarea
 description: Multi-line text input fields for longer content entry.
+previewBlockId: textarea-with-placeholder
 tags:
   - form
 ---
@@ -9,7 +10,7 @@ import UIEditor from "../../components/UIEditor.astro";
 
 ## Basic
 
-<UIEditor>{`
+<UIEditor uiId="textarea" uiBlockId="textarea-basic">{`
 ┌──────────────────────────────┐
 │                              │
 │                              │
@@ -19,7 +20,7 @@ import UIEditor from "../../components/UIEditor.astro";
 
 ## With Label
 
-<UIEditor>{`
+<UIEditor uiId="textarea" uiBlockId="textarea-with-label">{`
 Comment
 ┌──────────────────────────────┐
 │                              │
@@ -30,7 +31,7 @@ Comment
 
 ## With Placeholder
 
-<UIEditor>{`
+<UIEditor uiId="textarea" uiBlockId="textarea-with-placeholder">{`
 Bio
 ┌──────────────────────────────┐
 │ Tell us about yourself...    │
@@ -41,7 +42,7 @@ Bio
 
 ## With Character Count
 
-<UIEditor>{`
+<UIEditor uiId="textarea" uiBlockId="textarea-with-character-count">{`
 Message
 ┌──────────────────────────────┐
 │ Hello, world!                │
