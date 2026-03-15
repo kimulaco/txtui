@@ -10,7 +10,7 @@ import UIEditor from "../../components/UIEditor.astro";
 
 ## Basic
 
-<UIEditor>{`
+<UIEditor uiId="key-value" uiBlockId="key-value-basic">{`
 Name:     Alice
 Email:    alice@example.com
 Role:     Admin
@@ -19,7 +19,7 @@ Status:   Active
 
 ## With Borders
 
-<UIEditor>{`
+<UIEditor uiId="key-value" uiBlockId="key-value-with-borders">{`
 ┌──────────┬───────────────────┐
 │ Name     │ Alice             │
 ├──────────┼───────────────────┤
@@ -33,6 +33,6 @@ Status:   Active
 
 ## Inline
 
-<UIEditor>{`
+<UIEditor uiId="key-value" uiBlockId="key-value-inline">{`
 Name: Alice  |  Email: alice@example.com  |  Role: Admin
 `}</UIEditor>

@@ -12,8 +12,12 @@ describe("TagFilter", () => {
     });
 
     expect(result).toContain('id="tag-filter"');
-    expect(result).toContain('data-tag="form"');
-    expect(result).toContain('data-tag="input"');
+    expect(result).toContain(
+      'data-tag="form" data-ga-click-event data-ga-click-event-name="ui_filter_tag_click" data-ga-click-event-tag="form"',
+    );
+    expect(result).toContain(
+      'data-tag="input" data-ga-click-event data-ga-click-event-name="ui_filter_tag_click" data-ga-click-event-tag="input"',
+    );
     expect(result).toContain('type="module"');
     expect(result).toContain("TagFilter.astro?astro&type=script");
   });

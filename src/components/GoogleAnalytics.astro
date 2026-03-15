@@ -16,11 +16,13 @@ const hasGa = /^G-[A-Z0-9]+$/i.test(measurementId ?? "");
       ></script>
       <script is:inline define:vars={{ measurementId }}>
         window.dataLayer = window.dataLayer || [];
-        function gtag() {
+        window.gtag = function gtag() {
           dataLayer.push(arguments);
-        }
-        gtag("js", new Date());
-        gtag("config", measurementId, { page_path: window.location.pathname });
+        };
+        window.gtag("js", new Date());
+        window.gtag("config", measurementId, {
+          page_path: window.location.pathname,
+        });
       </script>
     </>
   )

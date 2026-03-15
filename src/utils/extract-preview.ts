@@ -9,7 +9,8 @@ export function extractPreview(body: string): string {
     });
   }
 
-  const uiEditorChildRegex = /<UIEditor>\s*\{`([\s\S]*?)`\}\s*<\/UIEditor>/g;
+  const uiEditorChildRegex =
+    /<UIEditor(?:\s[^>]*)?>\s*\{`([\s\S]*?)`\}\s*<\/UIEditor>/g;
   for (const match of body.matchAll(uiEditorChildRegex)) {
     candidates.push({
       index: match.index ?? Number.MAX_SAFE_INTEGER,
