@@ -1,6 +1,5 @@
 import { experimental_AstroContainer as AstroContainer } from "astro/container";
 import { describe, expect, it } from "vitest";
-// @ts-ignore - .astro imports are handled by Vite, not tsc
 import GoogleAnalytics from "./GoogleAnalytics.astro";
 
 describe("GoogleAnalytics", () => {

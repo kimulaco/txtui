@@ -1,6 +1,5 @@
 import { experimental_AstroContainer as AstroContainer } from "astro/container";
 import { describe, expect, it } from "vitest";
-// @ts-ignore - .astro imports are handled by Vite, not tsc
 import JsonLd from "./JsonLd.astro";
 
 describe("JsonLd", () => {
