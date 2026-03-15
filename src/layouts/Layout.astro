@@ -76,5 +76,27 @@ const gaId = import.meta.env.PUBLIC_GA_MEASUREMENT_ID;
       <slot />
     </main>
     <Footer />
+    <script is:inline>
+      document.addEventListener("click", (event) => {
+        if (!(event.target instanceof Element)) {
+          return;
+        }
+
+        const target = event.target.closest("[data-ga-click-event]");
+        if (!(target instanceof HTMLElement)) {
+          return;
+        }
+
+        const eventName = target.dataset.gaClickEventName?.trim();
+        if (!eventName || typeof window.gtag !== "function") {
+          return;
+        }
+
+        window.gtag("event", eventName, {
+          ui_id: target.dataset.gaClickEventUiId,
+          ui_block_id: target.dataset.gaClickEventUiBlockId,
+        });
+      });
+    </script>
   </body>
 </html>

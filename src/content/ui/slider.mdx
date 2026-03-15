@@ -9,14 +9,14 @@ import UIEditor from "../../components/UIEditor.astro";
 
 ## Basic
 
-<UIEditor>{`
+<UIEditor uiId="slider" uiBlockId="slider-basic">{`
 0 ────────●──────── 100
                72
 `}</UIEditor>
 
 ## With Label
 
-<UIEditor>{`
+<UIEditor uiId="slider" uiBlockId="slider-with-label">{`
 Volume
 0 ──●──────────────── 100
       18
@@ -24,7 +24,7 @@ Volume
 
 ## Range
 
-<UIEditor>{`
+<UIEditor uiId="slider" uiBlockId="slider-range">{`
 Price Range
 $0 ───●────────●─── $1000
      $200     $800
@@ -32,7 +32,7 @@ $0 ───●────────●─── $1000
 
 ## Steps
 
-<UIEditor>{`
+<UIEditor uiId="slider" uiBlockId="slider-steps">{`
 Quality
 Low ──●───────────── High
   [ Low ] [ Med ] [ High ]

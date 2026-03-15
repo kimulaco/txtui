@@ -27,19 +27,21 @@ describe("extractPreview", () => {
   });
 
   it("extracts content from UIEditor template children", () => {
-    const body = "<UIEditor>{`\n┌──┐\n│A │\n└──┘\n`}</UIEditor>";
+    const body =
+      '<UIEditor uiId="button" uiBlockId="button-basic">{`\n┌──┐\n│A │\n└──┘\n`}</UIEditor>';
     expect(extractPreview(body)).toBe("┌──┐\n│A │\n└──┘");
   });
 
   it("extracts content from UIEditor content prop", () => {
-    const body = "<UIEditor content={String.raw`\n[Button]\n`} />";
+    const body =
+      '<UIEditor uiId="button" uiBlockId="button-basic" content={String.raw`\n[Button]\n`} />';
     expect(extractPreview(body)).toBe("[Button]");
   });
 
   it("returns the earliest block among mixed syntaxes", () => {
     const body = [
       "intro",
-      "<UIEditor>{`\nFirst\n`}</UIEditor>",
+      '<UIEditor uiId="button" uiBlockId="button-basic">{`\nFirst\n`}</UIEditor>',
       "```",
       "Second",
       "```",

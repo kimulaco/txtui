@@ -15,7 +15,8 @@ describe("GoogleAnalytics", () => {
       'src="https://www.googletagmanager.com/gtag/js?id=G-ABC123"',
     );
     expect(result).toContain('const measurementId = "G-ABC123"');
-    expect(result).toContain('gtag("config", measurementId');
+    expect(result).toContain("window.gtag = function gtag()");
+    expect(result).toContain('window.gtag("config", measurementId');
   });
 
   it("renders nothing for an invalid measurement id", async () => {
