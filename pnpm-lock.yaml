@@ -43,8 +43,8 @@ importers:
         specifier: 20.8.4
         version: 20.8.4
       knip:
-        specifier: 6.0.2
-        version: 6.0.2
+        specifier: 6.0.3
+        version: 6.0.3
       prettier:
         specifier: 3.8.1
         version: 3.8.1
@@ -2751,8 +2751,8 @@ packages:
     resolution: {integrity: sha512-o+NO+8WrRiQEE4/7nwRJhN1HWpVmJm511pBHUxPLtp0BUISzlBplORYSmTclCnJvQq2tKu/sgl3xVpkc7ZWuQQ==}
     engines: {node: '>=6'}
 
-  knip@6.0.2:
-    resolution: {integrity: sha512-W17Bo5N9AYn0ZkgWHGBmK/01SrSmr3B6iStr3zudDa2eqi+Kc8VmPjSpTYKDV2Uy/kojrlcH/gS1wypAXfXRRA==}
+  knip@6.0.3:
+    resolution: {integrity: sha512-6Ai+Iv41dVpBYH6mReFejhniWq4eiaKrBw4kghqz2Ew5psQMYEqYxJtXLdj/7vRJ3nVaHpakhYUCKO8p3ftNsQ==}
     engines: {node: ^20.19.0 || >=22.12.0}
     hasBin: true
 
@@ -7064,7 +7064,7 @@ snapshots:
 
   kleur@4.1.5: {}
 
-  knip@6.0.2:
+  knip@6.0.3:
     dependencies:
       '@nodelib/fs.walk': 1.2.8
       fast-glob: 3.3.3
