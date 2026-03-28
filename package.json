@@ -34,10 +34,10 @@
     "pre-commit": "pnpm check:pre-commit"
   },
   "dependencies": {
-    "@astrojs/mdx": "5.0.2",
-    "@astrojs/sitemap": "3.7.1",
+    "@astrojs/mdx": "5.0.3",
+    "@astrojs/sitemap": "3.7.2",
     "@sentry/astro": "10.46.0",
-    "astro": "6.0.8"
+    "astro": "6.1.1"
   },
   "packageManager": "pnpm@10.33.0",
   "devDependencies": {
