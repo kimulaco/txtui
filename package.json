@@ -57,7 +57,7 @@
     "tailwindcss": "4.2.4",
     "tsx": "4.21.0",
     "ttf2woff2": "8.0.1",
-    "typescript": "5.9.3",
+    "typescript": "6.0.3",
     "vitest": "4.1.5",
     "wrangler": "4.84.1"
   }
