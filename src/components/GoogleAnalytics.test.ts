@@ -16,6 +16,7 @@ describe("GoogleAnalytics", () => {
     );
     expect(result).toContain('const measurementId = "G-ABC123"');
     expect(result).toContain("window.gtag = function gtag()");
+    expect(result).toContain('window.gtag("consent", "default"');
     expect(result).toContain('window.gtag("config", measurementId');
   });
 

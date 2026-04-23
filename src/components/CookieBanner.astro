@@ -1,0 +1,61 @@
+---
+import { COOKIE_CONSENT_KEY } from "../config";
+
+const cookieConsentKey = COOKIE_CONSENT_KEY;
+---
+
+<div
+  id="cookie-banner"
+  class="hidden fixed bottom-0 left-0 right-0 bg-zinc-700 border-t border-border z-50"
+>
+  <div
+    class="max-w-5xl mx-auto px-4 py-4 flex flex-col sm:flex-row items-start sm:items-center gap-4"
+  >
+    <p class="text-sm text-text flex-1">
+      We use Google Analytics to analyze site traffic. By clicking "Accept", you
+      consent to our use of cookies.
+    </p>
+    <div class="flex gap-2 shrink-0">
+      <button
+        id="cookie-decline"
+        class="text-sm text-text hover:text-text transition-colors px-3 py-1.5 border border-text hover:border-text-muted"
+      >
+        Decline
+      </button>
+      <button
+        id="cookie-accept"
+        class="text-sm text-bg bg-text hover:opacity-80 transition-opacity px-3 py-1.5"
+      >
+        Accept
+      </button>
+    </div>
+  </div>
+</div>
+
+<script is:inline define:vars={{ cookieConsentKey }}>
+  (function () {
+    var banner = document.getElementById("cookie-banner");
+    if (!banner) return;
+
+    if (localStorage.getItem(cookieConsentKey)) return;
+
+    banner.classList.remove("hidden");
+
+    document
+      .getElementById("cookie-accept")
+      .addEventListener("click", function () {
+        localStorage.setItem(cookieConsentKey, "granted");
+        if (typeof window.gtag === "function") {
+          window.gtag("consent", "update", { analytics_storage: "granted" });
+        }
+        banner.remove();
+      });
+
+    document
+      .getElementById("cookie-decline")
+      .addEventListener("click", function () {
+        localStorage.setItem(cookieConsentKey, "denied");
+        banner.remove();
+      });
+  })();
+</script>
