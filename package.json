@@ -43,7 +43,7 @@
   "devDependencies": {
     "@secretlint/secretlint-rule-preset-recommend": "13.0.2",
     "@tailwindcss/vite": "4.3.0",
-    "@typescript-eslint/parser": "8.59.3",
+    "@typescript-eslint/parser": "8.59.4",
     "@vitest/coverage-v8": "4.1.6",
     "eslint": "10.4.0",
     "eslint-plugin-astro": "1.7.0",
