@@ -59,6 +59,6 @@
     "ttf2woff2": "8.0.1",
     "typescript": "6.0.3",
     "vitest": "4.1.7",
-    "wrangler": "4.93.1"
+    "wrangler": "4.94.0"
   }
 }
