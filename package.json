@@ -39,7 +39,7 @@
     "@sentry/astro": "10.53.1",
     "astro": "6.3.7"
   },
-  "packageManager": "pnpm@10.33.4",
+  "packageManager": "pnpm@11.2.2",
   "devDependencies": {
     "@secretlint/secretlint-rule-preset-recommend": "13.0.2",
     "@tailwindcss/vite": "4.3.0",
@@ -60,5 +60,12 @@
     "typescript": "6.0.3",
     "vitest": "4.1.7",
     "wrangler": "4.94.0"
+  },
+  "devEngines": {
+    "runtime": {
+      "name": "node",
+      "version": "24.13.1",
+      "onFail": "download"
+    }
   }
 }

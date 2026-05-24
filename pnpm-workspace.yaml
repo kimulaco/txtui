@@ -1,4 +1,4 @@
-useNodeVersion: 24.13.1
+saveExact: true
 
 minimumReleaseAge: 1440
 
@@ -20,4 +20,5 @@ allowBuilds:
   esbuild: true
   sharp: true
   simple-git-hooks: true
+  ttf2woff2: false
   workerd: true
