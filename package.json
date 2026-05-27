@@ -36,7 +36,7 @@
   "dependencies": {
     "@astrojs/mdx": "5.0.6",
     "@astrojs/sitemap": "3.7.3",
-    "@sentry/astro": "10.53.1",
+    "@sentry/astro": "10.54.0",
     "astro": "6.3.8"
   },
   "packageManager": "pnpm@11.3.0",
