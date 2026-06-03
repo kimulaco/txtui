@@ -10,16 +10,16 @@ importers:
     dependencies:
       '@astrojs/mdx':
         specifier: 6.0.1
-        version: 6.0.1(astro@6.4.2(@types/node@25.3.3)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.59.0)(tsx@4.22.4)(yaml@2.9.0))
+        version: 6.0.1(astro@6.4.3(@types/node@25.3.3)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.59.0)(tsx@4.22.4)(yaml@2.9.0))
       '@astrojs/sitemap':
         specifier: 3.7.3
         version: 3.7.3
       '@sentry/astro':
         specifier: 10.56.0
-        version: 10.56.0(astro@6.4.2(@types/node@25.3.3)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.59.0)(tsx@4.22.4)(yaml@2.9.0))(encoding@0.1.13)(rollup@4.59.0)
+        version: 10.56.0(astro@6.4.3(@types/node@25.3.3)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.59.0)(tsx@4.22.4)(yaml@2.9.0))(encoding@0.1.13)(rollup@4.59.0)
       astro:
-        specifier: 6.4.2
-        version: 6.4.2(@types/node@25.3.3)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.59.0)(tsx@4.22.4)(yaml@2.9.0)
+        specifier: 6.4.3
+        version: 6.4.3(@types/node@25.3.3)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.59.0)(tsx@4.22.4)(yaml@2.9.0)
     devDependencies:
       '@secretlint/secretlint-rule-preset-recommend':
         specifier: 13.0.2
@@ -1858,8 +1858,8 @@ packages:
     resolution: {integrity: sha512-aOLc/aDR7lTWAHlytEefwn4Y6qs6uMr69DZvUx2A1AOAZsWhGB/paiRWPtVchh9wzMvLeqr+DkbENhVreVr9AQ==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
-  astro@6.4.2:
-    resolution: {integrity: sha512-8H89CH2dKL5SCU99OCqdU9BGjmPkSJqaPurywj5XMo7eMFGUFD3vsNhdEKnEh4mK4LgGje3/QDTTSIIGst0G0Q==}
+  astro@6.4.3:
+    resolution: {integrity: sha512-heArIk8zLcxuoj1WgBH2zGdAD8zKSU1mEcBvS6hYMEHRPlbtvB+4Y8ri9Z27hzeryvGaFgrH32zjghEfV2y07g==}
     engines: {node: '>=22.12.0', npm: '>=9.6.5', pnpm: '>=7.1.0'}
     hasBin: true
 
@@ -2130,8 +2130,8 @@ packages:
     resolution: {integrity: sha512-Btj2BOOO83o3WyH59e8MgXsxEQVcarkUOpEYrubB0urwnN10yQ364rsiByU11nZlqWYZm05i/of7io4mzihBtQ==}
     engines: {node: '>=8'}
 
-  devalue@5.6.3:
-    resolution: {integrity: sha512-nc7XjUU/2Lb+SvEFVGcWLiKkzfw8+qHI7zn8WYXKkLMgfGSHbgCEaR6bJpev8Cm6Rmrb19Gfd/tZvGqx9is3wg==}
+  devalue@5.8.1:
+    resolution: {integrity: sha512-4CXDYRBGqN+57wVJkuXBYmpAVUSg3L6JAQa/DFqm238G73E1wuyc/JhGQJzN7vUf/CMphYau2zXbfWzDR5aTEw==}
 
   devlop@1.1.0:
     resolution: {integrity: sha512-RWmIqhcFf1lRYBvNmr7qTNuyCt/7/ns2jbpp1+PalgE/rDQcBT0fioSMUpJ93irlUhC5hrg4cYqe6U+0ImW0rA==}
@@ -4350,13 +4350,13 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@astrojs/mdx@6.0.1(astro@6.4.2(@types/node@25.3.3)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.59.0)(tsx@4.22.4)(yaml@2.9.0))':
+  '@astrojs/mdx@6.0.1(astro@6.4.3(@types/node@25.3.3)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.59.0)(tsx@4.22.4)(yaml@2.9.0))':
     dependencies:
       '@astrojs/internal-helpers': 0.10.0
       '@astrojs/markdown-remark': 7.2.0
       '@mdx-js/mdx': 3.1.1
       acorn: 8.16.0
-      astro: 6.4.2(@types/node@25.3.3)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.59.0)(tsx@4.22.4)(yaml@2.9.0)
+      astro: 6.4.3(@types/node@25.3.3)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.59.0)(tsx@4.22.4)(yaml@2.9.0)
       es-module-lexer: 2.0.0
       estree-util-visit: 2.0.0
       hast-util-to-html: 9.0.5
@@ -5302,13 +5302,13 @@ snapshots:
     dependencies:
       '@sentry/core': 10.56.0
 
-  '@sentry/astro@10.56.0(astro@6.4.2(@types/node@25.3.3)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.59.0)(tsx@4.22.4)(yaml@2.9.0))(encoding@0.1.13)(rollup@4.59.0)':
+  '@sentry/astro@10.56.0(astro@6.4.3(@types/node@25.3.3)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.59.0)(tsx@4.22.4)(yaml@2.9.0))(encoding@0.1.13)(rollup@4.59.0)':
     dependencies:
       '@sentry/browser': 10.56.0
       '@sentry/core': 10.56.0
       '@sentry/node': 10.56.0
       '@sentry/vite-plugin': 5.3.0(encoding@0.1.13)(rollup@4.59.0)
-      astro: 6.4.2(@types/node@25.3.3)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.59.0)(tsx@4.22.4)(yaml@2.9.0)
+      astro: 6.4.3(@types/node@25.3.3)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.59.0)(tsx@4.22.4)(yaml@2.9.0)
     transitivePeerDependencies:
       - '@opentelemetry/exporter-trace-otlp-http'
       - encoding
@@ -5876,7 +5876,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  astro@6.4.2(@types/node@25.3.3)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.59.0)(tsx@4.22.4)(yaml@2.9.0):
+  astro@6.4.3(@types/node@25.3.3)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.59.0)(tsx@4.22.4)(yaml@2.9.0):
     dependencies:
       '@astrojs/compiler': 4.0.0
       '@astrojs/internal-helpers': 0.10.0
@@ -5892,7 +5892,7 @@ snapshots:
       clsx: 2.1.1
       common-ancestor-path: 2.0.0
       cookie: 1.1.1
-      devalue: 5.6.3
+      devalue: 5.8.1
       diff: 8.0.3
       dset: 3.1.4
       es-module-lexer: 2.0.0
@@ -6207,7 +6207,7 @@ snapshots:
 
   detect-libc@2.1.2: {}
 
-  devalue@5.6.3: {}
+  devalue@5.8.1: {}
 
   devlop@1.1.0:
     dependencies:
