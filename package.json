@@ -39,7 +39,7 @@
     "@sentry/astro": "10.56.0",
     "astro": "6.4.4"
   },
-  "packageManager": "pnpm@11.5.1",
+  "packageManager": "pnpm@11.5.2",
   "devDependencies": {
     "@secretlint/secretlint-rule-preset-recommend": "13.0.2",
     "@tailwindcss/vite": "4.3.0",
