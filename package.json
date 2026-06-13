@@ -42,7 +42,7 @@
   "packageManager": "pnpm@11.6.0",
   "devDependencies": {
     "@secretlint/secretlint-rule-preset-recommend": "13.0.2",
-    "@tailwindcss/vite": "4.3.0",
+    "@tailwindcss/vite": "4.3.1",
     "@typescript-eslint/parser": "8.61.0",
     "@vitest/coverage-v8": "4.1.8",
     "eslint": "10.4.1",
@@ -54,7 +54,7 @@
     "secretlint": "13.0.2",
     "serve": "14.2.6",
     "simple-git-hooks": "2.13.1",
-    "tailwindcss": "4.3.0",
+    "tailwindcss": "4.3.1",
     "tsx": "4.22.4",
     "ttf2woff2": "8.0.1",
     "typescript": "6.0.3",
