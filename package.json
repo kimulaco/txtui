@@ -44,7 +44,7 @@
     "@secretlint/secretlint-rule-preset-recommend": "13.0.7",
     "@tailwindcss/vite": "4.3.1",
     "@typescript-eslint/parser": "8.64.0",
-    "@vitest/coverage-v8": "4.1.8",
+    "@vitest/coverage-v8": "4.1.11",
     "eslint": "10.7.0",
     "eslint-plugin-astro": "1.7.0",
     "happy-dom": "20.10.6",
@@ -58,7 +58,7 @@
     "tsx": "4.22.4",
     "ttf2woff2": "8.0.1",
     "typescript": "6.0.3",
-    "vitest": "4.1.8",
+    "vitest": "4.1.11",
     "wrangler": "4.100.0"
   },
   "devEngines": {
