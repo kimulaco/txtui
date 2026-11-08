@@ -52,7 +52,7 @@
     "prettier": "3.9.5",
     "prettier-plugin-astro": "0.14.1",
     "secretlint": "13.0.7",
-    "serve": "14.2.6",
+    "serve": "14.2.7",
     "simple-git-hooks": "2.13.1",
     "tailwindcss": "4.3.3",
     "tsx": "4.22.4",
